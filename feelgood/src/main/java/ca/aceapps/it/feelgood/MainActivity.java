@@ -1,5 +1,4 @@
-
-//Zhiyuan Hua n01406966
+//Gireesh Sharma-Singh N01193783
 package ca.aceapps.it.feelgood;
 
 import android.os.Bundle;
