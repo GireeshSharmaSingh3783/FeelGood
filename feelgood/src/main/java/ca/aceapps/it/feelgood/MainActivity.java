@@ -1,3 +1,5 @@
+
+//Zhiyuan Hua n01406966
 package ca.aceapps.it.feelgood;
 
 import android.os.Bundle;
