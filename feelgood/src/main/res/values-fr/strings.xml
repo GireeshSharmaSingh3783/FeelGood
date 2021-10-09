@@ -13,7 +13,8 @@
     <string name="nav_header_desc">En-tête de navigation</string>
     <string name="action_settings">Paramètres</string>
 
-    <string name="menu_home">Accueil</string>
-    <string name="menu_gallery">Galerie</string>
-    <string name="menu_slideshow">Diaporama</string>
+    <string name="menu_home">Principal</string>
+    <string name="menu_gallery">Créer un journal</string>
+    <string name="menu_slideshow">Lire les anciens journaux</string>
+    <string name="welcome">WELCOME TO FEEL GOOD</string>
 </resources>
