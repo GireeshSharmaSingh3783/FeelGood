@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this)
                 .setTitle("Exiting App")
-                .setIcon(getDrawable(R.drawable.teamlogo))
+                .setIcon(getDrawable(R.drawable.feelgood))
                 .setMessage("Would you like to exit FeelGood?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
