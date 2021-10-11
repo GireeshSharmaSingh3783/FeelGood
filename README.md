@@ -1,5 +1,5 @@
 # FeelGood
-###### by: Brett Kean, Eghe Iyobosa, Gireesh Sharma-Singh, and Zhiyuan Hua
+###### by: Gireesh Sharma-Singh, Brett Kean, Zhiyuan Hua and Eghe Iyobosa.
 ###### Depression is on the rise and will soon kill more people than heart disease.
 ###### Social media, email, messaging, apps, and now intelligent bots fight for our attention and feed addictions.
 ###### This is a journaling app which allows the user to process their emotions, both positive and negative is bound to inspire changes after each usage.
@@ -8,3 +8,6 @@
 ###### The requirements for the App being developed is a Navigation Drawer, Target API 29 or 30 minimum API 23.
 ###### This application will support English and French.
 ###### With every Team based project there needs to be a way to keep track of all work being done. We keep track of our progress on Trello.
+###### On Trello minimum of 5 stories split into 5 task. Db created on the Cloud.
+# Project milestone. 
+###### App is currently running smooth with a few warnings.
