@@ -14,7 +14,7 @@ public class GalleryViewModel extends ViewModel {
 
     public GalleryViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("What are you feeling today?");
     }
 
     public LiveData<String> getText() {

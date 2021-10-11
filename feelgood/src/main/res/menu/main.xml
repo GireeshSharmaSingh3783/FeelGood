@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     tools:context=".mainActivity">
 
     <item
         android:id="@+id/youtube"
         android:orderInCategory="100"
         android:title="@string/youtube"
-        app:showAsAction="always|withText"
+
        android:icon="@drawable/youtube" />
     <item
         android:id="@+id/action_settings"
