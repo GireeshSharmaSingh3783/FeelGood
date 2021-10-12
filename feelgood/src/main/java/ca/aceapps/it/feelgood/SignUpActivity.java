@@ -43,6 +43,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         editTextGender = (EditText) findViewById(R.id.gender);
         editTextEmail  = (EditText) findViewById(R.id.emailreg);
         editTextPassword = (EditText) findViewById(R.id.passreg);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
     }
 
     @Override

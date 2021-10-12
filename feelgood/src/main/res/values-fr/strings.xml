@@ -19,15 +19,17 @@
     <string name="menu_home">Principal</string>
     <string name="menu_gallery">Créer un journal</string>
     <string name="menu_slideshow">Lire les anciens journaux</string>
-    <string name="welcome">WELCOME TO FEEL GOOD</string>
+    <string name="welcome">
+BIENVENUE POUR SE SENTIR BIEN</string>
     <string name="youtube">youtube</string>
-    <string name="or">Or</string>
-    <string name="signup">SIGNUP</string>
-    <string name="login">LOGIN</string>
-    <string name="forget_your_password">Forget your password?</string>
-    <string name="username">UserName</string>
-    <string name="password">Password</string>
+    <string name="or">Ou</string>
+    <string name="signup">S'INSCRIRE</string>
+    <string name="login">CONNEXION</string>
+    <string name="forget_your_password">
+Mot de passe oublié?</string>
+    <string name="username">Nom d'utilisateur</string>
+    <string name="password">Mot de passe</string>
     <string name="email">Email</string>
-    <string name="gender">Gender</string>
-    <string name="age">Age</string>
+    <string name="gender">Genre</string>
+    <string name="age">Âge</string>
 </resources>
