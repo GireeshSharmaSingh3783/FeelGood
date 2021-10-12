@@ -7,11 +7,13 @@ package ca.aceapps.it.feelgood;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.net.Uri;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -62,23 +64,41 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-         getMenuInflater().inflate(R.menu.main, menu);
-
+         MenuInflater inflater = getMenuInflater();
+         inflater.inflate(R.menu.main, menu);
         return true;
     }
 
 
-//            @Override
-//            public boolean onOptionsItemSelected(MenuItem item) {
-//                Intent intent;
-//                int id = item.getItemId();
-//                if (id == R.id.youtube) {
-//                    intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtube.com"));
-//                    startActivity(intent);
-//                }
-//                return true;
-//                }
-                    @Override
+
+            @Override
+            public boolean onOptionsItemSelected(MenuItem item) {
+
+                switch (item.getItemId()){
+                    case R.id.youtube:
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=1Dv-ldGLnIY"));
+                        startActivity(intent);
+                        break;
+                    case R.id.therapist:
+                         intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.psychologytoday.com/ca/therapists?search=Toronto"));
+                        startActivity(intent);
+                        break;
+                    case R.id.menu3:
+                        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.crisisservicescanada.ca/en/o"));
+                        startActivity(intent);
+                        break;
+                    case R.id.menu4:
+                        Toast toast = Toast.makeText(getApplicationContext(), "Settings Selected", Toast.LENGTH_LONG);
+                        toast.show();
+                        break;
+                    default:
+                        return super.onOptionsItemSelected(item);
+                }
+
+
+                return true;
+              }
+    @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)

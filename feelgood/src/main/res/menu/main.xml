@@ -21,7 +21,7 @@
         android:title="@string/action_settings"
         app:showAsAction="never" />
     <item
-        android:id="@+id/menu2"
+        android:id="@+id/therapist"
         android:orderInCategory="100"
         android:title="@string/menu_2"
         app:showAsAction="never" />
