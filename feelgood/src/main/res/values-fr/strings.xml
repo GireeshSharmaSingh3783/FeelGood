@@ -21,4 +21,10 @@
     <string name="menu_slideshow">Lire les anciens journaux</string>
     <string name="welcome">WELCOME TO FEEL GOOD</string>
     <string name="youtube">youtube</string>
+    <string name="or">Or</string>
+    <string name="signup">SIGNUP</string>
+    <string name="login">LOGIN</string>
+    <string name="forget_your_password">Forget your password?</string>
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
 </resources>

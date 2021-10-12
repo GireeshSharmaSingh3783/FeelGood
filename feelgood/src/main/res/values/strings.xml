@@ -19,4 +19,13 @@
     <string name="menu_slideshow">Read Past Journals</string>
     <string name="welcome">WELCOME TO FEEL GOOD</string>
     <string name="youtube">youtube</string>
+
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="or">Or</string>
+    <string name="signup">SIGNUP</string>
+    <string name="login">LOGIN</string>
+    <string name="forget_your_password">Forget your password?</string>
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
 </resources>

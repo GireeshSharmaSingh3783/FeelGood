@@ -23,6 +23,8 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+
+
     <style name="Theme.FeelGood.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.FeelGood.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
