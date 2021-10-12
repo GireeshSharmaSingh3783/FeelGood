@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.crisisservicescanada.ca/en/o"));
                         startActivity(intent);
                         break;
-                    case R.id.menu4:
+                    case R.id.action_settings:
                         Toast toast = Toast.makeText(getApplicationContext(), "Settings Selected", Toast.LENGTH_LONG);
                         toast.show();
                         break;
