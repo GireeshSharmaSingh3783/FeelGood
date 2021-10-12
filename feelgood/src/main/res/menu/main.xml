@@ -11,15 +11,11 @@
         android:id="@+id/youtube"
         android:orderInCategory="100"
         android:title="@string/youtube"
-        app:showAsAction="always"
+        app:showAsAction="always|withText"
 
        android:icon="@drawable/youtube"
         />
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+
     <item
         android:id="@+id/therapist"
         android:orderInCategory="100"
@@ -31,9 +27,9 @@
         android:title="@string/menu_3"
         app:showAsAction="never" />
     <item
-        android:id="@+id/menu4"
+        android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:title="@string/menu_4"
+        android:title="@string/action_settings"
         app:showAsAction="never" />
 
 </menu>
