@@ -2,7 +2,7 @@
 <!--Zhiyuan Hua N01406966-->
 <!--Brett Kean N01158642-->
 <!--Eghe Iyobosa N01107171-->
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">FeelGood</string>
     <string name="navigation_drawer_open">Open navigation</string>
     <string name="navigation_drawer_close">Close navigation</string>
@@ -20,8 +20,8 @@
     <string name="welcome">WELCOME TO FEEL GOOD</string>
     <string name="youtube">youtube</string>
 
-    <string name="login_email_hint">Email Address</string>
-    <string name="login_password_hint">Password</string>
+    <string name="login_email_hint" tools:ignore="MissingTranslation">Email Address</string>
+    <string name="login_password_hint" tools:ignore="MissingTranslation">Password</string>
     <string name="or">Or</string>
     <string name="signup">SIGNUP</string>
     <string name="login">LOGIN</string>
@@ -30,6 +30,6 @@
     <string name="password">Password</string>
     <string name="gender">Gender</string>
     <string name="age">Age</string>
-    <string name="full_name">Full Name</string>
+    <string name="full_name" tools:ignore="MissingTranslation">Full Name</string>
 
 </resources>
