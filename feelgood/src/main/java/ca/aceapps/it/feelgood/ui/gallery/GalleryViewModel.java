@@ -17,6 +17,7 @@ public class GalleryViewModel extends ViewModel {
         mText.setValue("What are you feeling today?");
     }
 
+
     public LiveData<String> getText() {
         return mText;
     }
