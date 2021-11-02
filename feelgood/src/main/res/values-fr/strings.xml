@@ -12,11 +12,11 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">En-tête de navigation</string>
     <string name="action_settings">Paramètres</string>
-    <string name="menu_2">menu2</string>
-    <string name="menu_3">menu3</string>
+    <string name="menu_2">Trouver de l\'aide</string>
+    <string name="menu_3">Prévention du suicide</string>
     <string name="menu_4">menu4</string>
 
-    <string name="menu_home">Principal</string>
+    <string name="menu_home">page d\'accueil</string>
     <string name="menu_gallery">Créer un journal</string>
     <string name="menu_slideshow">Lire les anciens journaux</string>
     <string name="welcome">
