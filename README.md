@@ -11,3 +11,4 @@
 ###### On Trello minimum of 5 stories split into 5 task. Db created on the Cloud.
 # Project milestone. 
 ###### App is currently running smooth with a few warnings.
+###### Proceeding with deliverable 3.

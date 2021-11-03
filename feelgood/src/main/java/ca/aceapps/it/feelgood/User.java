@@ -1,3 +1,8 @@
+//Gireesh Sharma-Singh N01193783
+//Zhiyuan Hua N01406966
+// Brett Kean N01158642
+//Eghe Iyobosa N01107171
+//////////////////////////////////
 package ca.aceapps.it.feelgood;
 
 public class User {
