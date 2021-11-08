@@ -13,6 +13,19 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.common.api.GoogleApiClient;
+
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.GoogleApiClient;
+
+
+
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -39,6 +52,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         signIn = (Button) findViewById(R.id.btn_login);
         signIn.setOnClickListener(this);
 
+
+
         editTextEmail = (EditText) findViewById(R.id.ed_username);
         editTextPassword = (EditText) findViewById(R.id.ed_password);
 
@@ -48,6 +63,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
+
+
+@Override
     public void onClick (View v){
         switch (v.getId()){
             case R.id.btn_signup:
