@@ -28,4 +28,13 @@
     <style name="Theme.FeelGood.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.FeelGood.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="GoogleSignInBtn">
+        <item name="android:background">@drawable/google_logo</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="FacebookSignInBtn">
+        <item name="android:background">@drawable/facebook_logo</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
 </resources>

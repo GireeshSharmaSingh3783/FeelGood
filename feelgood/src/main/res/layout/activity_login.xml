@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fb="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,7 +21,7 @@
         android:textSize="60dp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-8dp" />
+        tools:layout_editor_absoluteX="2dp" />
 
     <EditText
         android:id="@+id/ed_username"
@@ -72,6 +73,7 @@
         app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <TextView
         android:id="@+id/ortextview"
         android:layout_width="34dp"
@@ -85,6 +87,24 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+
+    <FrameLayout
+        android:id="@+id/googleSignInBtnFrameLayout"
+        android:layout_width="94dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/google_signIn"
+            android:layout_width="221dp"
+            android:layout_height="34dp"
+            android:visibility="gone" />
+
+    </FrameLayout>
 
     <Button
         android:id="@+id/btn_signup"
@@ -136,6 +156,19 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/googleCustomSignInBtn"
+        style="@style/GoogleSignInBtn"
+
+        android:layout_width="93dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="156dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/google_logo"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
