@@ -80,7 +80,7 @@ public class SignUpActivity extends AppCompatActivity{
 
                 User users = new User(name, age, gender, email, password);
 
-                refDB.setValue(users);
+                refDB.child(gender).setValue(users);
 
             }
         });
