@@ -10,8 +10,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,9 +23,13 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import java.util.ArrayList;
+
+import ca.aceapps.it.feelgood.MainActivity;
 import ca.aceapps.it.feelgood.R;
 import ca.aceapps.it.feelgood.databinding.FragmentGalleryBinding;
 import ca.aceapps.it.feelgood.ui.slideshow.SlideshowFragment;
+import ca.aceapps.it.feelgood.ui.slideshow.SlideshowViewModel;
 
 public class GalleryFragment extends Fragment {
 
@@ -32,6 +38,9 @@ public class GalleryFragment extends Fragment {
     private Button happy, sad;
     EditText say;
     String tell;
+    Spinner spinner;
+    ArrayList<String> dayofweek;
+    ArrayAdapter<String> dw;
 
 
 
@@ -51,13 +60,26 @@ public class GalleryFragment extends Fragment {
 
         say=root.findViewById(R.id.editText);
 
+        spinner=(Spinner) root.findViewById(R.id.spinner);
+        dayofweek = new ArrayList<>();
+        dayofweek.add("Monday");
+        dayofweek.add("Tuesday");
+        dayofweek.add("Wednesday");
+        dayofweek.add("Thursday");
+        dayofweek.add("Friday");
+        dayofweek.add("Saturday");
+        dayofweek.add("Sunday");
+        dw = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, dayofweek);
+        spinner.setAdapter(dw);
+
+
+
         happy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"I'm happy", Toast.LENGTH_SHORT).show();
-                tell=say.getText().toString();
-                Intent intent = new Intent(getActivity(), SlideshowFragment.class);
-                intent.putExtra("say1",tell);
+
+
             }
         });
         sad.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +103,7 @@ public class GalleryFragment extends Fragment {
         });
         return root;
     }
+
 
 
 

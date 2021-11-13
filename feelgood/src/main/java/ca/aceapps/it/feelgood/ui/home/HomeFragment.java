@@ -37,6 +37,7 @@ public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
     private ImageButton button1;
 
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
@@ -78,7 +79,6 @@ public class HomeFragment extends Fragment {
 
             }
         });
-
 
 
 
