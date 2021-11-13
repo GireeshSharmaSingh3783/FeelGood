@@ -71,7 +71,16 @@ public class SignUpActivity extends AppCompatActivity{
                 rootNode = FirebaseDatabase.getInstance();
                 refDB = rootNode.getReference("users");
 
-                refDB.setValue("2nd data storage");
+                //Getting values from text fields
+                String name = editTextFullName.getEditText().getText().toString();
+                String age =editTextAge.getEditText().getText().toString();
+                String gender= editTextGender.getEditText().getText().toString();
+                String email= editTextEmail.getEditText().getText().toString();
+                String password=editTextPassword.getEditText().getText().toString();
+
+                User users = new User(name, age, gender, email, password);
+
+                refDB.setValue(users);
 
             }
         });
