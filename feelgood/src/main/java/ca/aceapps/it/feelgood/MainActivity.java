@@ -2,6 +2,7 @@
 //Zhiyuan Hua N01406966
 // Brett Kean N01158642
 //Eghe Iyobosa N01107171
+//Supriya N01394695
 ////////////////////////////////////////
 package ca.aceapps.it.feelgood;
 
@@ -17,6 +18,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -40,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
+        // Configure sign-in to request the user's ID, email address, and basic
+// profile. ID and basic profile are included in DEFAULT_SIGN_IN.
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -65,6 +76,14 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
+
+    //Need to do.
+//    @Override
+//    protected void onStart() {
+//        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+//        updateUI(account);
+//        super.onStart();
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

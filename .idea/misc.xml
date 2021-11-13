@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/EGHE/AndroidStudioProjects/FeelGood/feelgood/src/main/res/drawable/button.xml" value="0.378125" />
+        <entry key="..\:/Users/EGHE/AndroidStudioProjects/FeelGood/feelgood/src/main/res/drawable/create_journal.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/EGHE/AndroidStudioProjects/FeelGood/feelgood/src/main/res/layout/activity_login.xml" value="0.27898550724637683" />
         <entry key="..\:/Users/George VIII/Desktop/CENG322/feelgood/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1953125" />
         <entry key="..\:/Users/George VIII/Desktop/CENG322/feelgood/src/main/res/drawable/button.xml" value="0.1" />
         <entry key="..\:/Users/George VIII/Desktop/CENG322/feelgood/src/main/res/layout/activity_login.xml" value="0.25" />

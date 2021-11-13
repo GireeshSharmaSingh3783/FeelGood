@@ -2,6 +2,7 @@
 //Zhiyuan Hua N01406966
 // Brett Kean N01158642
 //Eghe Iyobosa N01107171
+//Supriya N01394695
 package ca.aceapps.it.feelgood.ui.gallery;
 
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,6 +26,7 @@ public class GalleryFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
     private FragmentGalleryBinding binding;
+    private Button happy, sad;
 
 
 
@@ -37,6 +40,26 @@ public class GalleryFragment extends Fragment {
 
 
         ////sad button functionality
+
+        happy=root.findViewById(R.id.happyButton);
+        sad=root.findViewById(R.id.sadButton);
+
+        happy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"I'm happy", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"I'm sad", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+
 
 
         final TextView textView = binding.textGallery;
