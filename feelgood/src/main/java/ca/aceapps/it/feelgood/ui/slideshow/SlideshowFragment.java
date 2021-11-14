@@ -33,6 +33,7 @@ import ca.aceapps.it.feelgood.MainActivity;
 import ca.aceapps.it.feelgood.R;
 import ca.aceapps.it.feelgood.databinding.FragmentSlideshowBinding;
 
+import static android.content.Intent.getIntent;
 import static androidx.core.content.ContextCompat.getSystemService;
 
 public class SlideshowFragment extends Fragment {
@@ -76,6 +77,7 @@ public class SlideshowFragment extends Fragment {
 
 
 
+
         final TextView textView = binding.textSlideshow;
         slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
@@ -86,6 +88,8 @@ public class SlideshowFragment extends Fragment {
         return root;
     }
 
+    private void setArguments(String say1) {
+    }
 
 
     @Override
