@@ -74,13 +74,13 @@ public class SignUpActivity extends AppCompatActivity{
                 //Getting values from text fields
                 String name = editTextFullName.getEditText().getText().toString();
                 String age =editTextAge.getEditText().getText().toString();
-                String gender= editTextGender.getEditText().getText().toString();
+                String phoneNumber= editTextGender.getEditText().getText().toString();
                 String email= editTextEmail.getEditText().getText().toString();
                 String password=editTextPassword.getEditText().getText().toString();
 
-                User users = new User(name, age, gender, email, password);
-
-                refDB.child(gender).setValue(users);
+                User users = new User(name, age, phoneNumber, email, password);
+                // please change gender to phone number
+                refDB.child(phoneNumber).setValue(users);
 
             }
         });

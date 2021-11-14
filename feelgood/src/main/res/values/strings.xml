@@ -30,7 +30,7 @@
     <string name="forget_your_password">Forget your password?</string>
     <string name="username">UserName</string>
     <string name="password">Password</string>
-    <string name="gender">Gender</string>
+    <string name="gender">Phone Number</string>
     <string name="age">Age</string>
     <string name="full_name" translatable="false" tools:ignore="MissingTranslation">Full Name</string>
     <!-- TODO: Remove or change this placeholder text -->

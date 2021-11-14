@@ -7,7 +7,7 @@
 package ca.aceapps.it.feelgood;
 
 public class User {
-    public String fullName, age, gender, email, password;
+    public String fullName, age, phoneNumber, email, password;
 
 
     public User() {
@@ -15,10 +15,10 @@ public class User {
     }
 
 
-    public User(String fullName, String age, String gender, String email, String password) {
+    public User(String fullName, String age, String phoneNumber, String email, String password) {
         this.fullName = fullName;
         this.age = age;
-        this.gender = gender;
+        this.phoneNumber = phoneNumber;
         this.email = email;
         this.password = password;
 
@@ -40,12 +40,12 @@ public class User {
         this.age = age;
     }
 
-    public String getGender() {
-        return gender;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmail() {
