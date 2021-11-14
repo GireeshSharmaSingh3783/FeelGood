@@ -26,7 +26,7 @@ import com.google.android.gms.common.SignInButton;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.common.api.GoogleApiClient;
+
 
 import android.content.SharedPreferences;
 
@@ -37,9 +37,10 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 
+import com.google.android.gms.common.api.ApiException;
 
-//import com.google.android.gms.auth.api.signin.GoogleSignIn;
-//import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+
+
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -48,19 +49,23 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView register;
+    private TextView register, Banner;
     private EditText editTextEmail, editTextPassword;
     private Button signIn;
+    Button googleCustomSignInBtn;
 
 
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
     Boolean savelogin;
     CheckBox savelogincheckbox;
+
+    GoogleSignInOptions gso;
     SignInButton google_signIn;
     //GoogleSignInClient googleSignInClient;
 
     private FirebaseAuth mAuth;
+
     private ProgressBar progressBar;
 
 
@@ -76,6 +81,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         savelogincheckbox = (CheckBox)findViewById(R.id.checkBox);
         editor=sharedPreferences.edit();
         google_signIn = findViewById(R.id.google_signIn);
+        Banner = (TextView) findViewById(R.id.Banner);
+
+
+        editTextEmail = (EditText) findViewById(R.id.ed_username);
+        editTextPassword = (EditText) findViewById(R.id.ed_password);
 
 
         // Configure Google Sign In
@@ -95,12 +105,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      //   });
 
 
-//        savelogin=sharedPreferences.getBoolean("savelogin",false);
-//        if(savelogin==true){
-//            savelogincheckbox.setChecked(true);
-//            emailET.setText(sharedPreferences.getString("email",null));
-//            passwordET.setText(sharedPreferences.getString("password",null));
-//        }
+//        googleCustomSignInBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                google_signIn.performClick();
+//            }
+//        });
+
+
+   savelogin=sharedPreferences.getBoolean("savelogin",false);
+        if(savelogin==true){
+            savelogincheckbox.setChecked(true);
+            editTextEmail.setText(sharedPreferences.getString("email",null));
+            editTextPassword.setText(sharedPreferences.getString("password",null));
+        }
 
         register = (TextView) findViewById(R.id.btn_signup);
         register.setOnClickListener(this);
@@ -113,9 +131,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
 
-
-        editTextEmail = (EditText) findViewById(R.id.ed_username);
-        editTextPassword = (EditText) findViewById(R.id.ed_password);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
@@ -200,6 +215,50 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
     }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        Banner.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                segueToRegisterActivity();
+//            }
+//        });
+//        signIn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                signInWithEmail(editTextEmail.getText().toString(), editTextPassword.getText().toString());
+//                handleRemeberMe();
+//                progressBar.setVisibility(View.VISIBLE);
+//
+//            }
+//        });
+//    }
+//    private boolean validateForm(){
+//        if(editTextEmail.getText().toString().isEmpty() ||
+//                editTextEmail.getText() == null ||
+//                editTextPassword.getText().toString().isEmpty()||
+//                editTextPassword.getText() == null
+//        ){
+//            return false;
+//        }
+//        return true;
+//    }
+//    @Override
 
+//    private void signInWithEmail(String email, String password){
+//        if (!validateForm()) {
+//            showAlertDialogOneOption(R.string.emptyCreds, R.string.okString);
+//
+//            return;
+//        }
+
+    /**
+     * Segues into Register activity
+     */
+//    private void segueToRegisterActivity(){
+//        Intent registerActivity = new Intent(LoginActivity.this, SignUpActivity.class);
+//        startActivity(registerActivity);
+//  }
 
 }
