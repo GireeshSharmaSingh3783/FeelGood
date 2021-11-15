@@ -30,7 +30,7 @@ BIENVENUE POUR SE SENTIR BIEN</string>
 Mot de passe oublié?</string>
     <string name="username">Nom d\'utilisateur</string>
     <string name="password">Mot de passe</string>
-    <string name="email" tools:ignore="ExtraTranslation">Email</string>
+    <string name="email" tools:ignore="DuplicateDefinition,ExtraTranslation">Email</string>
     <string name="gender">Genre</string>
     <string name="age">Âge</string>
 
@@ -58,4 +58,6 @@ Mot de passe oublié?</string>
     <string name="remember_me">Remember Me</string>
     <string name="todo">TODO</string>
     <string name="button">Button</string>
+    <string name="comments">Comments</string>
+    <string name="phone_number">Phone Number</string>
 </resources>
