@@ -33,6 +33,21 @@ Mot de passe oublié?</string>
     <string name="email" tools:ignore="ExtraTranslation">Email</string>
     <string name="gender">Genre</string>
     <string name="age">Âge</string>
-    <string name="customer">menu_customer</string>
-    <string name="customer_re">customer</string>
+
+
+    <string name="brightside_text1">What happend today?</string>
+    <string name="brightside_text2">Can you write the positives of your situation?</string>
+    <string name="brightside_text3">Finish</string>
+    <string name="mental_text1">All or Nothing</string>
+    <string name="mental_text2">Overgeneralization</string>
+    <string name="mental_text3">Catastrophizing</string>
+    <string name="mental_text4">Cognitive Distortions</string>
+    <string name="mental_text5">TextView</string>
+    <string name="mental_text6">Next</string>
+    <string name="record_journal_text1">What happend today?</string>
+    <string name="record_journal_text2">Next</string>
+    <string name="home_text1">Button</string>
+    <string name="slideshow_text1">Button</string>
+    <string name="customer_revi">custome_rev</string>
+    <string name="customer">customer_re</string>
 </resources>
