@@ -27,6 +27,7 @@ import java.util.ArrayList;
 
 import ca.aceapps.it.feelgood.MainActivity;
 import ca.aceapps.it.feelgood.R;
+import ca.aceapps.it.feelgood.RecordJournal;
 import ca.aceapps.it.feelgood.databinding.FragmentGalleryBinding;
 import ca.aceapps.it.feelgood.ui.slideshow.SlideshowFragment;
 import ca.aceapps.it.feelgood.ui.slideshow.SlideshowViewModel;
@@ -86,6 +87,10 @@ public class GalleryFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"I'm sad", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getActivity(), RecordJournal.class);
+                startActivity(intent);
+
             }
         });
 
