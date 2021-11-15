@@ -34,18 +34,25 @@ Mot de passe oublié?</string>
     <string name="gender">Genre</string>
     <string name="age">Âge</string>
 
-    <string name="customer_re">customer</string>
-    <string name="brightside_text1">What happend today?</string>
-    <string name="brightside_text2">Can you write the positives of your situation?</string>
-    <string name="brightside_text3">Finish</string>
-    <string name="mental_text1">All or Nothing</string>
-    <string name="mental_text2">Overgeneralization</string>
-    <string name="mental_text3">Catastrophizing</string>
-    <string name="mental_text4">Cognitive Distortions</string>
-    <string name="mental_text5">TextView</string>
-    <string name="mental_text6">Next</string>
-    <string name="record_journal_text1">What happend today?</string>
-    <string name="record_journal_text2">Next</string>
-    <string name="home_text1">Button</string>
-    <string name="slideshow_text1">Button</string>
+    <string name="customer_re">cliente</string>
+    <string name="brightside_text1">Que s'est-il passé aujourd'hui ?
+</string>
+    <string name="brightside_text2">Pouvez-vous écrire les points positifs de votre situation?
+</string>
+    <string name="brightside_text3">Finir</string>
+    <string name="mental_text1">tout ou rien
+</string>
+    <string name="mental_text2">Généralisation excessive
+</string>
+    <string name="mental_text3">Catastrophique</string>
+    <string name="mental_text4">Distitionneurs cognitifs
+</string>
+    <string name="mental_text5">Affichage
+</string>
+    <string name="mental_text6">Prochaine</string>
+    <string name="record_journal_text1">Que s'est-il passé aujourd'hui ?
+?</string>
+    <string name="record_journal_text2">Prochaine</string>
+    <string name="home_text1">Bouton</string>
+    <string name="slideshow_text1">Bouton</string>
 </resources>
