@@ -1,5 +1,5 @@
 # FeelGood
-###### by: Gireesh Sharma-Singh, Brett Kean, Zhiyuan Hua and Eghe Iyobosa.
+###### by: Gireesh Sharma-Singh, Brett Kean, Supriya, Zhiyuan Hua and Eghe Iyobosa.
 ###### Depression is on the rise and will soon kill more people than heart disease.
 ###### Social media, email, messaging, apps, and now intelligent bots fight for our attention and feed addictions.
 ###### This is a journaling app which allows the user to process their emotions, both positive and negative is bound to inspire changes after each usage.

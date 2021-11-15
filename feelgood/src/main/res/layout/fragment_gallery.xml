@@ -24,7 +24,7 @@
 
     <Button
         android:id="@+id/sadButton"
-        android:text="sadButton"
+        android:text="@string/sadbutton"
         android:layout_width="112dp"
         android:layout_height="90dp"
         android:foreground="@drawable/sadbutton"
@@ -42,7 +42,7 @@
         android:layout_height="90dp"
         android:background="@drawable/happybutton"
         android:foreground="@drawable/happybutton"
-        android:text="happyButton"
+        android:text="@string/happybutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.254"
@@ -54,7 +54,7 @@
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter you want to say"
+        android:hint="@string/enter_you_want_to_say"
         android:textColorHint="@color/yellow"
         android:textColor="#F8F2F2"
         app:layout_constraintBottom_toBottomOf="parent"

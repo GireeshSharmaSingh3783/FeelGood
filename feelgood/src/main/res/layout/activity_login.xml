@@ -136,7 +136,7 @@
         android:layout_width="258dp"
         android:layout_height="34dp"
         android:layout_marginStart="92dp"
-        android:text="      Don't have an account?"
+        android:text="Don't have an account?"
         android:textAlignment="textStart"
         android:textColor="#040000"
         android:textStyle="bold"
@@ -152,7 +152,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="264dp"
         android:buttonTint="@color/black"
-        android:text="Remember Me"
+        android:text="@string/remember_me"
         android:textColor="#595855"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -169,7 +169,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/google_logo"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/todo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
