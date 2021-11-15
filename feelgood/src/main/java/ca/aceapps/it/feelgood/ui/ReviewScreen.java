@@ -8,6 +8,7 @@ package ca.aceapps.it.feelgood.ui;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 
 import ca.aceapps.it.feelgood.R;
 
+
 public class ReviewScreen extends AppCompatActivity {
     private TextView txtRating;
     private RatingBar rbRating;
@@ -27,6 +29,8 @@ public class ReviewScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review_screen);
+
+
 
         init();
 
