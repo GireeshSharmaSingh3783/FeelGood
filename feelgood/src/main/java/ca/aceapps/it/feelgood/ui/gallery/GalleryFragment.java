@@ -79,6 +79,9 @@ public class GalleryFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"I'm happy", Toast.LENGTH_SHORT).show();
+               // go to Record Journal Activity
+                Intent intent = new Intent(getActivity(), RecordJournal.class);
+                startActivity(intent);
 
 
             }
@@ -87,7 +90,7 @@ public class GalleryFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"I'm sad", Toast.LENGTH_SHORT).show();
-
+                // go to Record Journal Activity
                 Intent intent = new Intent(getActivity(), RecordJournal.class);
                 startActivity(intent);
 
