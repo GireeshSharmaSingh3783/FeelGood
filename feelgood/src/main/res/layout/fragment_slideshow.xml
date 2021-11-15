@@ -40,7 +40,7 @@
         android:layout_height="37dp"
         android:background="@color/yellow"
         android:src="@drawable/ic_baseline_add_alert_24"
-        android:text="@string/slideshow_text1"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.911"
