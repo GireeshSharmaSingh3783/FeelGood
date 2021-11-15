@@ -32,4 +32,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nav_header_subtitle" />
+
+    <Button
+        android:id="@+id/ReviewScreen"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="90dp"
+        android:text="Review"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        />
+
 </LinearLayout>
