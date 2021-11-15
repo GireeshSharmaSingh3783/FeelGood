@@ -52,6 +52,8 @@
     <string name="slideshow_text1">Button</string>
     <string name="customer_revi">custome_rev</string>
     <string name="customer">customer_re</string>
+    <string name="user_rating">User Rating</string>
+    <string name="submit">Submit</string>
 
 
 </resources>
