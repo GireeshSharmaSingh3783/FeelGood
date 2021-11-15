@@ -4,7 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1C1A1A"
     tools:context=".MentalDistortions">
 
+    <CheckBox
+        android:id="@+id/allorNothing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mental_text1"
+        android:textColor="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.155" />
 
+    <CheckBox
+        android:id="@+id/Overgeneralization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mental_text2"
+        android:textColor="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <CheckBox
+        android:id="@+id/Catastrophizing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mental_text3"
+        android:textColor="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <TextView
+        android:id="@+id/mentalDis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mental_text4"
+        android:textColor="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="343dp"
+        android:layout_height="211dp"
+        android:text="@string/mental_text5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.775" />
+
+    <Button
+        android:id="@+id/nxtBtn02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mental_text6"
+        android:textColor="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.954" />
 </androidx.constraintlayout.widget.ConstraintLayout>

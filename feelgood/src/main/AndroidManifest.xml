@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FeelGood">
         <activity
-            android:name=".ui.ReviewScreen"
-            android:exported="false" />
-        <activity
             android:name=".MentalDistortions"
             android:exported="false" />
         <activity
