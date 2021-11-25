@@ -63,6 +63,7 @@
     <string name="comments">Comments</string>
     <string name="phone_number">Phone Number</string>
     <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
 
 
 </resources>
