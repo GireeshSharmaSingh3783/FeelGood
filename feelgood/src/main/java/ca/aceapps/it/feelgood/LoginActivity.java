@@ -47,6 +47,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
     private TextView register, Banner;
@@ -175,8 +180,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             editTextPassword.requestFocus();
             return;
         }
-        if(password.length() < 6){
-            editTextPassword.setError("Password should be at least 6 characters long");
+        if(password.length() < 8){
+            editTextPassword.setError("Password should be at least 8 characters long");
             editTextPassword.requestFocus();
             return;
         }
@@ -196,6 +201,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         });
 
     }
+//    public static boolean limitPasswordCharacters(String ed_Password){
+//        // UserName Validation Pattern String
+//        final Pattern USER_NAME_PATTERN = Pattern.compile("^[a-zA-Z0-9@.#$%^&*_&\\\\]+$");
+//        if(USER_NAME_PATTERN.matcher(about).matches()){
+//            return true;
+//        }
+//        return false;
+//    }
 
     public void handleRemeberMe(){
         String email = editTextEmail.getText().toString();
