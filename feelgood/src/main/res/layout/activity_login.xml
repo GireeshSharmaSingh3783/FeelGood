@@ -92,10 +92,10 @@
 
     <FrameLayout
         android:id="@+id/googleSignInBtnFrameLayout"
-        android:layout_width="94dp"
-        android:layout_height="79dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginBottom="140dp"
+        android:layout_width="65dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginBottom="144dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -104,6 +104,13 @@
             android:layout_width="221dp"
             android:layout_height="34dp"
             android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/goolebutton"
+            android:layout_width="61dp"
+            android:layout_height="59dp"
+            android:background="@drawable/googlelogo"
+            android:text="@string/home_text1" />
 
     </FrameLayout>
 
@@ -158,20 +165,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/googleCustomSignInBtn"
-        style="@style/GoogleSignInBtn"
-
-        android:layout_width="93dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="156dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/google_logo"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:contentDescription="@string/todo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

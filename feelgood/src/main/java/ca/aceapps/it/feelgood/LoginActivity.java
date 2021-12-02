@@ -11,12 +11,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +33,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
 import android.content.SharedPreferences;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -50,6 +54,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import ca.aceapps.it.feelgood.databinding.FragmentHomeBinding;
 
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
@@ -73,6 +79,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private ProgressBar progressBar;
 
+    public ImageButton button1;
 
 
 
@@ -93,7 +100,33 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         editTextPassword = (EditText) findViewById(R.id.ed_password);
 
 
-        // Configure Google Sign In
+
+        button1 = findViewById(R.id.goolebutton);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar snackbar = Snackbar.make(v,"Sign in with Google?",Snackbar.LENGTH_LONG).setAction("Yes",new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        openWeb("https://mail.google.com/mail");
+
+                    }
+
+                    public void openWeb(String url) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                    }
+                });
+                snackbar.setActionTextColor(Color.GREEN);
+                snackbar.setTextColor(Color.YELLOW);
+                snackbar.show();
+
+            }
+        });
+
+
+    // Configure Google Sign In
 //        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
 //                .requestIdToken(getString(R.string.default_web_client_id))
 //                .requestEmail()
@@ -140,6 +173,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         mAuth = FirebaseAuth.getInstance();
+
+
 
     }
 
@@ -273,5 +308,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //        Intent registerActivity = new Intent(LoginActivity.this, SignUpActivity.class);
 //        startActivity(registerActivity);
 //  }
+
 
 }
