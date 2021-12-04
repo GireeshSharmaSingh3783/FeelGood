@@ -24,6 +24,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import java.util.ArrayList;
 
+import ca.aceapps.it.feelgood.LoginActivity;
 import ca.aceapps.it.feelgood.MainActivity;
 import ca.aceapps.it.feelgood.R;
 import ca.aceapps.it.feelgood.RecordJournal;
@@ -79,8 +80,9 @@ public class GalleryFragment extends Fragment {
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"I'm happy", Toast.LENGTH_SHORT).show();
                // go to Record Journal Activity
-                Intent intent = new Intent(getActivity(), RecordJournal.class);
-                startActivity(intent);
+                Intent inte = new Intent(getActivity(), RecordJournal.class);
+                startActivity(inte);
+
 
 
             }
@@ -90,8 +92,8 @@ public class GalleryFragment extends Fragment {
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"I'm sad", Toast.LENGTH_SHORT).show();
                 // go to Record Journal Activity
-                Intent intent = new Intent(getActivity(), RecordJournal.class);
-                startActivity(intent);
+                Intent inten = new Intent(getActivity(), RecordJournal.class);
+                startActivity(inten);
 
             }
         });

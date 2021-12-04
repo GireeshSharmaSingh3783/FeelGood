@@ -8,12 +8,13 @@ package ca.aceapps.it.feelgood;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class MentalDistortions extends AppCompatActivity {
-    Button nxtbt;
+    Button nxtbt, learnMore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,16 @@ public class MentalDistortions extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MentalDistortions.this, BrightSide.class);
                 startActivity(intent);
+            }
+        });
+
+        learnMore = (Button) findViewById(R.id.learnmore);
+        learnMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.healthline.com/health/cognitive-distortions#how-to-change"));
+                startActivity(intent);
+
             }
         });
     }
