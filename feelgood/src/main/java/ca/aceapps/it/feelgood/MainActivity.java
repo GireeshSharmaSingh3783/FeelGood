@@ -8,6 +8,9 @@ package ca.aceapps.it.feelgood;
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
 import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.View;
@@ -32,10 +35,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import ca.aceapps.it.feelgood.databinding.ActivityMainBinding;
 
+import static ca.aceapps.it.feelgood.ui.draw.PaintView.colorList;
+import static ca.aceapps.it.feelgood.ui.draw.PaintView.current_brush;
+import static ca.aceapps.it.feelgood.ui.draw.PaintView.pathList;
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+
+    public static Path path = new Path();
+    public static Paint paint_brush = new Paint();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -143,6 +153,36 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public void currentColor(int c){
+        current_brush = c;
+        path = new Path();
+    }
+    public void pencil(View view){
+        paint_brush.setColor(Color.BLACK);
+        currentColor(paint_brush.getColor());
+    }
+    public void eraser(View view){
+        pathList.clear();
+        colorList.clear();
+        path.reset();
+    }
+    public void red(View view){
+        paint_brush.setColor(Color.RED);
+        currentColor(paint_brush.getColor());
+    }
+    public void yellow(View view){
+        paint_brush.setColor(Color.YELLOW);
+        currentColor(paint_brush.getColor());
+    }
+    public void green(View view){
+        paint_brush.setColor(Color.GREEN);
+        currentColor(paint_brush.getColor());
+    }
+    public void blue(View view){
+        paint_brush.setColor(Color.BLUE);
+        currentColor(paint_brush.getColor());
     }
 
 
