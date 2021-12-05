@@ -10,6 +10,7 @@ import android.view.View;
 public class DrawCircle extends View {
 
     private Paint paint = new Paint();
+    private Paint paint1 = new Paint();
 
     public DrawCircle(Context context) {
         super(context);
@@ -20,7 +21,11 @@ public class DrawCircle extends View {
         canvas.drawColor(Color.WHITE, PorterDuff.Mode.MULTIPLY);
 
         paint.setColor(Color.RED);
-        paint.setStrokeWidth(5);
-        canvas.drawCircle(550,500,150,paint);
+        paint.setStrokeWidth(10);
+        canvas.drawCircle(550,0,100,paint);
+        paint1.setColor(Color.BLUE);
+        paint1.setStrokeWidth(10);
+        canvas.drawCircle(500,0,100,paint1);
+
     }
 }
