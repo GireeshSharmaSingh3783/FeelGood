@@ -3,6 +3,8 @@ package ca.aceapps.it.feelgood.ui.draw;
 import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 
 import ca.aceapps.it.feelgood.R;
 import ca.aceapps.it.feelgood.databinding.FragmentDrawBinding;
@@ -41,6 +44,12 @@ public class drawFragment extends Fragment {
 
         binding = FragmentDrawBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+        RelativeLayout relativeLayout = (RelativeLayout) root.findViewById(R.id.draw_display);
+        relativeLayout.addView(new DrawCircle(getActivity()));
+
+
+
 
         return root;
     }
