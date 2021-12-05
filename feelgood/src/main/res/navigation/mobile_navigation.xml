@@ -23,6 +23,13 @@
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 
+    <fragment
+        android:id="@+id/nav_draw"
+        android:name="ca.aceapps.it.feelgood.ui.draw.drawFragment"
+        android:label="@string/menu_draw"
+        tools:layout="@layout/fragment_draw"/>
+
+
 
     <fragment
         android:id="@+id/nav_customer"
