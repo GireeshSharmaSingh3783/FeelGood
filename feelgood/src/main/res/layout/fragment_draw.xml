@@ -8,27 +8,12 @@
     android:background="@color/white"
     tools:context=".ui.draw.DrawActivity">
 
-    <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/zhiyuan_layout"
+        android:id="@+id/draw_layout"
         android:layout_width="393dp"
         android:layout_height="449dp"
-        android:layout_above="@+id/zhiyuan_layout2"
+        android:layout_above="@+id/draw_layout2"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -50,17 +35,17 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/zhiyuan_layout2"
+        android:id="@+id/draw_layout2"
         android:layout_width="match_parent"
         android:layout_height="185dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:background="@drawable/tools">
+        android:background="@color/white">
 
         <ImageButton
-            android:id="@+id/zhiyuan_red"
+            android:id="@+id/draw_red"
             android:layout_width="64dp"
             android:layout_height="62dp"
             android:background="@drawable/button"
@@ -75,7 +60,7 @@
             tools:ignore="OnClick" />
 
         <ImageButton
-            android:id="@+id/zhiyuan_yellow"
+            android:id="@+id/draw_yellow"
             android:layout_width="64dp"
             android:layout_height="62dp"
             android:background="@drawable/button"
@@ -89,7 +74,7 @@
             app:layout_constraintVertical_bias="0.542" />
 
         <ImageButton
-            android:id="@+id/zhiyuan_green"
+            android:id="@+id/draw_green"
             android:layout_width="64dp"
             android:layout_height="62dp"
             android:background="@drawable/button"
@@ -103,7 +88,7 @@
             app:layout_constraintVertical_bias="0.542" />
 
         <ImageButton
-            android:id="@+id/zhiyuan_blue"
+            android:id="@+id/draw_blue"
             android:layout_width="64dp"
             android:layout_height="62dp"
             android:background="@drawable/button"
@@ -139,6 +124,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.589" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/draw_display"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
