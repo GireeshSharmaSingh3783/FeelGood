@@ -23,9 +23,9 @@ public class DrawCircle extends View {
         paint.setColor(Color.RED);
         paint.setStrokeWidth(10);
         canvas.drawCircle(550,0,100,paint);
-        paint1.setColor(Color.BLUE);
+        paint1.setColor(Color.GRAY);
         paint1.setStrokeWidth(10);
-        canvas.drawCircle(500,0,100,paint1);
+        canvas.drawCircle(510,0,100,paint1);
 
     }
 }

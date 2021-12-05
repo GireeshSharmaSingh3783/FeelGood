@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
         path = new Path();
     }
     public void pencil(View view){
-        paint_brush.setColor(Color.BLACK);
+        paint_brush.setColor(Color.LTGRAY);
         currentColor(paint_brush.getColor());
     }
     public void eraser(View view){
