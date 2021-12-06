@@ -83,7 +83,8 @@
             app:layout_constraintHorizontal_bias="0.578"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.542" />
+            app:layout_constraintVertical_bias="0.542"
+            tools:ignore="OnClick" />
 
         <ImageButton
             android:id="@+id/draw_green"
@@ -97,7 +98,8 @@
             app:layout_constraintHorizontal_bias="0.764"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.542" />
+            app:layout_constraintVertical_bias="0.542"
+            tools:ignore="OnClick" />
 
         <ImageButton
             android:id="@+id/draw_blue"
@@ -111,7 +113,8 @@
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.542" />
+            app:layout_constraintVertical_bias="0.542"
+            tools:ignore="OnClick" />
 
         <Button
             android:layout_width="56dp"
@@ -123,7 +126,8 @@
             app:layout_constraintHorizontal_bias="0.198"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.589" />
+            app:layout_constraintVertical_bias="0.589"
+            tools:ignore="OnClick" />
 
         <Button
             android:layout_width="56dp"
@@ -135,9 +139,11 @@
             app:layout_constraintHorizontal_bias="0.039"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.589" />
+            app:layout_constraintVertical_bias="0.589"
+            tools:ignore="OnClick" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </RelativeLayout>
+
