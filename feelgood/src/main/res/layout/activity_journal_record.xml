@@ -7,23 +7,25 @@
         android:background="#1C1A1A"
     tools:context=".JournalRecord">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/record_journal_text1"
-            android:textColor="@color/whiteTextColor"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.061" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="230dp"
+        android:layout_height="33dp"
+        android:text="@string/record_journal_text1"
+        android:textColor="@color/whiteTextColor"
+        android:textSize="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061" />
 
         <EditText
             android:id="@+id/editText"
             android:layout_width="342dp"
             android:layout_height="546dp"
-            android:text="@string/txtfrag"
+            android:hint="@string/txtfrag"
+            android:textColorHint="@color/whiteTextColor"
             android:textColor="@color/whiteTextColor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
