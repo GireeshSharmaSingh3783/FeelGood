@@ -5,9 +5,7 @@
 ////////////////////////////////////////
 package ca.aceapps.it.feelgood;
 
-import android.Manifest;
 import android.content.DialogInterface;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
@@ -24,8 +22,6 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -34,6 +30,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import ca.aceapps.it.feelgood.databinding.ActivityMainBinding;
+import ca.aceapps.it.feelgood.Review;
 
 import static ca.aceapps.it.feelgood.ui.draw.PaintView.colorList;
 import static ca.aceapps.it.feelgood.ui.draw.PaintView.current_brush;
@@ -70,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery,R.id.nav_slideshow)
+                R.id.nav_home, R.id.nav_gallery,R.id.nav_slideshow,R.id.nav_customer)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
