@@ -23,7 +23,7 @@
             android:id="@+id/editText"
             android:layout_width="342dp"
             android:layout_height="546dp"
-            android:text="@string/hello_blank_fragment"
+            android:text="@string/txtfrag"
             android:textColor="@color/whiteTextColor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

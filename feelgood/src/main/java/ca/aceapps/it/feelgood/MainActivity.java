@@ -186,4 +186,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void create(View view) {
+        Intent intent = new Intent(MainActivity.this, JournalRecord.class);
+        startActivity(intent);
+    }
+
+    public void paint(View view) {
+        Intent intent;
+        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.cnbc.com/2020/03/31/mental-vacations-and-travel-photos-relieve-stress.html"));
+        startActivity(intent);
+    }
+
+    public void diary(View view) {
+        Intent intent;
+        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://owlcation.com/humanities/Why-is-it-important-to-keep-a-journal"));
+        startActivity(intent);
+    }
+
+    public void review(View view) {
+    }
 }
