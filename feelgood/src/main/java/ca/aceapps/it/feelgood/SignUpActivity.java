@@ -48,10 +48,10 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        //mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
-//        banner = (TextView) findViewById(R.id.Banner);
-//        banner.setOnClickListener(this);
+      //banner = (TextView) findViewById(R.id.Banner);
+      //banner.setOnClickListener(this);
 
 
         editTextFullName = findViewById(R.id.fullName);
@@ -75,7 +75,7 @@ public class SignUpActivity extends AppCompatActivity {
                 String phoneNumber = editTextGender.getEditText().getText().toString();
                 String email = editTextEmail.getEditText().getText().toString();
                 String password = editTextPassword.getEditText().getText().toString();
-                // password = makePass()
+
 
                 if (name.isEmpty()) {
                     editTextFullName.setError("Full name is required");
@@ -139,7 +139,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 }else{
                             Toast.makeText(SignUpActivity.this,"Failed to register. Please try again",Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
-                                    //refDB.child(phoneNumber).setValue(users);
+                                   // refDB.child(phoneNumber).setValue("users");
                                 }
                             }
                         });
