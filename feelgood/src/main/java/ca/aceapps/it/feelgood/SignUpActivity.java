@@ -136,7 +136,9 @@ public class SignUpActivity extends AppCompatActivity {
                                             }
                                         }
                                     });
-
+                                }else{
+                            Toast.makeText(SignUpActivity.this,"Failed to register. Please try again",Toast.LENGTH_LONG).show();
+                            progressBar.setVisibility(View.GONE);
                                     //refDB.child(phoneNumber).setValue(users);
                                 }
                             }
