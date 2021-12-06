@@ -76,13 +76,58 @@ public class SignUpActivity extends AppCompatActivity{
                 String phoneNumber= editTextGender.getEditText().getText().toString();
                 String email= editTextEmail.getEditText().getText().toString();
                 String password=editTextPassword.getEditText().getText().toString();
+                // password = makePass()
+
+                if(name.isEmpty()){
+                    editTextFullName.setError("Full name is required");
+                    editTextFullName.requestFocus();
+                    return;
+                }
+
+                if(age.isEmpty()){
+                    editTextAge.setError("Age is required");
+                    editTextAge.requestFocus();
+                    return;
+                }
+
+                if(phoneNumber.isEmpty()){
+                    editTextGender.setError("Please provide your gender");
+                    editTextGender.requestFocus();
+                    return;
+                }
+
+                if(email.isEmpty()){
+                    editTextEmail.setError("Email is required");
+                    editTextEmail.requestFocus();
+                    return;
+                }
+
+                if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    editTextEmail.setError("Please provide a valid email address");
+                    editTextEmail.requestFocus();
+                    return;
+                }
+
+                if(password.isEmpty()){
+                    editTextPassword.setError("Password is required");
+                    editTextPassword.requestFocus();
+                    return;
+                }
+
+                if(password.length() < 6){
+                    editTextPassword.setError("Password should be at least 6 characters long");
+                    editTextPassword.requestFocus();
+                    return;
+                }
 
                 User users = new User(name, age, phoneNumber, email, password);
-                // please change gender to phone number
+
                 refDB.child(phoneNumber).setValue(users);
 
             }
         });
+
+
     }
 
 
@@ -107,49 +152,9 @@ public class SignUpActivity extends AppCompatActivity{
 //        String fullName = editTextFullName.getText().toString().trim();
 //        String age = editTextAge.getText().toString().trim();
 //        String gender = editTextGender.getText().toString().trim();
-//
-//        if(fullName.isEmpty()){
-//            editTextFullName.setError("Full name is required");
-//            editTextFullName.requestFocus();
-//            return;
-//        }
-//
-//        if(age.isEmpty()){
-//            editTextAge.setError("Age is required");
-//            editTextAge.requestFocus();
-//            return;
-//        }
-//
-//        if(gender.isEmpty()){
-//            editTextGender.setError("Please provide your gender");
-//            editTextGender.requestFocus();
-//            return;
-//        }
-//
-//        if(email.isEmpty()){
-//            editTextEmail.setError("Email is required");
-//            editTextEmail.requestFocus();
-//            return;
-//        }
-//
-//        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-//            editTextEmail.setError("Please provide a valid email address");
-//            editTextEmail.requestFocus();
-//            return;
-//        }
-//
-//        if(password.isEmpty()){
-//            editTextPassword.setError("Password is required");
-//            editTextPassword.requestFocus();
-//            return;
-//        }
-//
-//        if(password.length() < 6){
-//            editTextPassword.setError("Password should be at least 6 characters long");
-//            editTextPassword.requestFocus();
-//            return;
-//        }
-//
+
+
+}
 //        progressBar.setVisibility(View.VISIBLE);
 //        mAuth.createUserWithEmailAndPassword(email,password)
 //                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -181,4 +186,3 @@ public class SignUpActivity extends AppCompatActivity{
 //
 //    }
 
-}
