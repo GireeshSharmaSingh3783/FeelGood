@@ -20,8 +20,9 @@
         android:textAlignment="center"
         android:textSize="60dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="2dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/ed_username"
@@ -110,7 +111,8 @@
             android:layout_width="61dp"
             android:layout_height="59dp"
             android:background="@drawable/googlelogo"
-            android:text="@string/home_text1" />
+            android:text="@string/home_text1"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </FrameLayout>
 
@@ -123,7 +125,6 @@
         android:background="@drawable/button"
         android:text="@string/signup"
         android:textColor="#ffffff"
-        android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

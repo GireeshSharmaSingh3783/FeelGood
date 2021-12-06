@@ -57,29 +57,33 @@ import java.util.regex.Pattern;
 import ca.aceapps.it.feelgood.databinding.FragmentHomeBinding;
 
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+public class LoginActivity extends AppCompatActivity  {
 
-    private TextView register, Banner;
-    private EditText editTextEmail, editTextPassword;
-    private Button signIn;
-    Button googleCustomSignInBtn;
+//    private TextView register, Banner;
+//    private EditText editTextEmail, editTextPassword;
+//    private Button signIn;
+//    Button googleCustomSignInBtn;
+//
+//
+//    SharedPreferences sharedPreferences;
+//    SharedPreferences.Editor editor;
+//    Boolean savelogin;
+//    CheckBox savelogincheckbox;
+//
+//    GoogleSignInOptions gso;
+//    SignInButton google_signIn;
+//    //GoogleSignInClient googleSignInClient;
+//
+//    private FirebaseAuth mAuth;
+//
+//    private ProgressBar progressBar;
+//
+//    public ImageButton button1;
+//
 
-
-    SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor;
-    Boolean savelogin;
-    CheckBox savelogincheckbox;
-
-    GoogleSignInOptions gso;
-    SignInButton google_signIn;
-    //GoogleSignInClient googleSignInClient;
-
-    private FirebaseAuth mAuth;
-
-    private ProgressBar progressBar;
-
-    public ImageButton button1;
-
+    EditText mEmail, mPassword;
+    Button btSignup, btLogin;
+    FirebaseAuth fAuth;
 
 
     @Override
@@ -87,42 +91,92 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        mEmail = findViewById(R.id.ed_username);
+        mPassword = findViewById(R.id.ed_password);
 
-        sharedPreferences = getSharedPreferences("loginref",MODE_PRIVATE);
-        savelogincheckbox = (CheckBox)findViewById(R.id.checkBox);
-        editor=sharedPreferences.edit();
-        google_signIn = findViewById(R.id.google_signIn);
-        Banner = (TextView) findViewById(R.id.Banner);
+        fAuth = FirebaseAuth.getInstance();
 
+        btLogin = findViewById(R.id.btn_login);
+        btSignup = findViewById(R.id.btn_signup);
 
-        editTextEmail = (EditText) findViewById(R.id.ed_username);
-        editTextPassword = (EditText) findViewById(R.id.ed_password);
-
-
-
-        button1 = findViewById(R.id.goolebutton);
-        button1.setOnClickListener(new View.OnClickListener() {
+        btLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar snackbar = Snackbar.make(v,"Sign in with Google?",Snackbar.LENGTH_LONG).setAction("Yes",new View.OnClickListener() {
+                String email = mEmail.getText().toString().trim();
+                String password = mPassword.getText().toString().trim();
+
+                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    mEmail.setError("Please provide a valid email address");
+                    mEmail.requestFocus();
+                    return;
+                }
+
+                if (password.isEmpty()) {
+                    mPassword.setError("Password is required");
+                    mPassword.requestFocus();
+                    return;
+                }
+
+                if (password.length() < 6) {
+                    mPassword.setError("Password should be at least 6 characters long");
+                    mPassword.requestFocus();
+                    return;
+                }
+
+                //Authenticate User
+
+                fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onClick(View v) {
-                        openWeb("https://mail.google.com/mail");
-
-                    }
-
-                    public void openWeb(String url) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse(url));
-                        startActivity(intent);
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()){
+                                Toast.makeText(LoginActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent (getApplicationContext(), MainActivity.class));
+                            }else {
+                                Toast.makeText(LoginActivity.this, "invalid login: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                            }
                     }
                 });
-                snackbar.setActionTextColor(Color.GREEN);
-                snackbar.setTextColor(Color.YELLOW);
-                snackbar.show();
 
             }
         });
+    }
+}
+//
+//        sharedPreferences = getSharedPreferences("loginref",MODE_PRIVATE);
+//        savelogincheckbox = (CheckBox)findViewById(R.id.checkBox);
+//        editor=sharedPreferences.edit();
+//        google_signIn = findViewById(R.id.google_signIn);
+//        Banner = (TextView) findViewById(R.id.Banner);
+//
+//
+//        editTextEmail = (EditText) findViewById(R.id.ed_username);
+//        editTextPassword = (EditText) findViewById(R.id.ed_password);
+//
+//
+//
+//        button1 = findViewById(R.id.goolebutton);
+//        button1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Snackbar snackbar = Snackbar.make(v,"Sign in with Google?",Snackbar.LENGTH_LONG).setAction("Yes",new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        openWeb("https://mail.google.com/mail");
+//
+//                    }
+//
+//                    public void openWeb(String url) {
+//                        Intent intent = new Intent(Intent.ACTION_VIEW);
+//                        intent.setData(Uri.parse(url));
+//                        startActivity(intent);
+//                    }
+//                });
+//                snackbar.setActionTextColor(Color.GREEN);
+//                snackbar.setTextColor(Color.YELLOW);
+//                snackbar.show();
+//
+//            }
+//        });
 
 
     // Configure Google Sign In
@@ -150,118 +204,118 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //        });
 
 
-   savelogin=sharedPreferences.getBoolean("savelogin",false);
-        if(savelogin==true){
-            savelogincheckbox.setChecked(true);
-            editTextEmail.setText(sharedPreferences.getString("email",null));
-            editTextPassword.setText(sharedPreferences.getString("password",null));
-        }
-
-        register = (TextView) findViewById(R.id.btn_signup);
-        register.setOnClickListener(this);
-
-
-
-        signIn = (Button) findViewById(R.id.btn_login);
-        signIn.setOnClickListener(this);
-
-
-
-
-
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-
-        mAuth = FirebaseAuth.getInstance();
-
-
-
-    }
-
-
-
-@Override
-    public void onClick (View v){
-        switch (v.getId()){
-            case R.id.btn_signup:
-                startActivity(new Intent(this, SignUpActivity.class));
-                break;
-
-            case R.id.btn_login:
-                userLogin();
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                break;
-                
-
-        }
-    }
-
-    private void userLogin() {
-        String email = editTextEmail.getText().toString().trim();
-        String password = editTextPassword.getText().toString().trim();
-
-        if(email.isEmpty()){
-            editTextEmail.setError("Email is required");
-            editTextEmail.requestFocus();
-            return;
-        }
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            editTextEmail.setError("Please provide a valid email address");
-            editTextEmail.requestFocus();
-            return;
-        }
-        if(password.isEmpty()){
-            editTextPassword.setError("Password is required");
-            editTextPassword.requestFocus();
-            return;
-        }
-        if(password.length() < 8){
-            editTextPassword.setError("Password should be at least 8 characters long");
-            editTextPassword.requestFocus();
-            return;
-        }
-        progressBar.setVisibility(View.GONE);
-
-        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-
-                if(task.isSuccessful()){
-                    //to user profile
-                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                }else{
-                    Toast.makeText(LoginActivity.this,"Failed to login. PLease check credentials and try again",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
-    }
-//    public static boolean limitPasswordCharacters(String ed_Password){
-//        // UserName Validation Pattern String
-//        final Pattern USER_NAME_PATTERN = Pattern.compile("^[a-zA-Z0-9@.#$%^&*_&\\\\]+$");
-//        if(USER_NAME_PATTERN.matcher(about).matches()){
-//            return true;
+//   savelogin=sharedPreferences.getBoolean("savelogin",false);
+//        if(savelogin==true){
+//            savelogincheckbox.setChecked(true);
+//            editTextEmail.setText(sharedPreferences.getString("email",null));
+//            editTextPassword.setText(sharedPreferences.getString("password",null));
 //        }
-//        return false;
+//
+//        register = (TextView) findViewById(R.id.btn_signup);
+//        register.setOnClickListener(this);
+//
+//
+//
+//        signIn = (Button) findViewById(R.id.btn_login);
+//        signIn.setOnClickListener(this);
+//
+//
+//
+//
+//
+//        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+//
+//        mAuth = FirebaseAuth.getInstance();
+//
+//
+//
 //    }
-
-    public void handleRemeberMe(){
-        String email = editTextEmail.getText().toString();
-        String password = editTextPassword.getText().toString();
-
-        if(savelogincheckbox.isChecked()){
-            editor.putBoolean("savelogin",true);
-            editor.putString("email",email);
-            editor.putString("password",password);
-            editor.commit();
-
-        }else{
-            editor.remove("savelogin");
-            editor.remove("email");
-            editor.remove("password");
-            editor.commit();
-        }
-
-    }
+//
+//
+//
+//@Override
+//    public void onClick (View v){
+//        switch (v.getId()){
+//            case R.id.btn_signup:
+//                startActivity(new Intent(this, SignUpActivity.class));
+//                break;
+//
+//            case R.id.btn_login:
+//                userLogin();
+//                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+//                break;
+//
+//
+//        }
+//    }
+//
+//    private void userLogin() {
+//        String email = editTextEmail.getText().toString().trim();
+//        String password = editTextPassword.getText().toString().trim();
+//
+//        if(email.isEmpty()){
+//            editTextEmail.setError("Email is required");
+//            editTextEmail.requestFocus();
+//            return;
+//        }
+//        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+//            editTextEmail.setError("Please provide a valid email address");
+//            editTextEmail.requestFocus();
+//            return;
+//        }
+//        if(password.isEmpty()){
+//            editTextPassword.setError("Password is required");
+//            editTextPassword.requestFocus();
+//            return;
+//        }
+//        if(password.length() < 8){
+//            editTextPassword.setError("Password should be at least 8 characters long");
+//            editTextPassword.requestFocus();
+//            return;
+//        }
+//        progressBar.setVisibility(View.GONE);
+//
+//        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//            @Override
+//            public void onComplete(@NonNull Task<AuthResult> task) {
+//
+//                if(task.isSuccessful()){
+//                    //to user profile
+//                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+//                }else{
+//                    Toast.makeText(LoginActivity.this,"Failed to login. PLease check credentials and try again",Toast.LENGTH_LONG).show();
+//                }
+//            }
+//        });
+//
+//    }
+////    public static boolean limitPasswordCharacters(String ed_Password){
+////        // UserName Validation Pattern String
+////        final Pattern USER_NAME_PATTERN = Pattern.compile("^[a-zA-Z0-9@.#$%^&*_&\\\\]+$");
+////        if(USER_NAME_PATTERN.matcher(about).matches()){
+////            return true;
+////        }
+////        return false;
+////    }
+//
+//    public void handleRemeberMe(){
+//        String email = editTextEmail.getText().toString();
+//        String password = editTextPassword.getText().toString();
+//
+//        if(savelogincheckbox.isChecked()){
+//            editor.putBoolean("savelogin",true);
+//            editor.putString("email",email);
+//            editor.putString("password",password);
+//            editor.commit();
+//
+//        }else{
+//            editor.remove("savelogin");
+//            editor.remove("email");
+//            editor.remove("password");
+//            editor.commit();
+//        }
+//
+//    }
 //    @Override
 //    protected void onStart() {
 //        super.onStart();
@@ -309,4 +363,3 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //  }
 
 
-}
