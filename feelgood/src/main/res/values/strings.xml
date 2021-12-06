@@ -65,6 +65,7 @@
     <string name="email">Email</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="customer_menu">Customer</string>
+    <string name="draw">Draw</string>
 
 
 </resources>

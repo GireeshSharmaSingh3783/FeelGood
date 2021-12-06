@@ -61,4 +61,5 @@ Mot de passe oublié?</string>
     <string name="phone_number">Phone Number</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="customer_menu">Customer</string>
+    <string name="draw">Draw</string>
 </resources>
