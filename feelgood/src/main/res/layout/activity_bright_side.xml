@@ -36,14 +36,14 @@
         android:id="@+id/writeBS"
         android:layout_width="342dp"
         android:layout_height="546dp"
-        android:text="@string/hello_blank_fragment"
+        android:text="@string/tell_metxt"
         android:textColor="@color/whiteTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/fin"
