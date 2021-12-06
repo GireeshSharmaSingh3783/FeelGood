@@ -14,8 +14,7 @@ public class HomeViewModel extends ViewModel {
 
     public HomeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("   WELCOME TO FEEL GOOD "  +
-                " \nHOW CAN I HELP...?");
+        mText.setValue("   GETTING STARTED ");
     }
 
     public LiveData<String> getText() {
