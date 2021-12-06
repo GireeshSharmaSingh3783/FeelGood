@@ -126,7 +126,18 @@ public class SignUpActivity extends AppCompatActivity {
                                 if(task.isSuccessful()){
                                     User users = new User(name, age, phoneNumber, email, password);
 
-                                    refDB.child(phoneNumber).setValue(users);
+                                    FirebaseDatabase.getInstance().getReference("users")
+                                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                            .setValue(users).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if(task.isSuccessful()){
+                                                Toast.makeText(SignUpActivity.this, "User has been added", Toast.LENGTH_LONG).show();
+                                            }
+                                        }
+                                    });
+
+                                    //refDB.child(phoneNumber).setValue(users);
                                 }
                             }
                         });
