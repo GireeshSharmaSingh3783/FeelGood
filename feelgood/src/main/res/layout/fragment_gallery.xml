@@ -52,11 +52,11 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="178dp"
+        android:layout_height="61dp"
         android:hint="@string/enter_you_want_to_say"
-        android:textColorHint="@color/yellow"
         android:textColor="#F8F2F2"
+        android:textColorHint="@color/yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

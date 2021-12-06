@@ -82,7 +82,7 @@ public class GalleryFragment extends Fragment {
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"I'm happy", Toast.LENGTH_SHORT).show();
                // go to Record Journal Activity
-                Intent inte = new Intent(getActivity(), MentalDistortions.class);
+                Intent inte = new Intent(getActivity(), JournalRecord.class);
                 startActivity(inte);
 
 
