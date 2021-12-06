@@ -5,51 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1C1A1A"
-    tools:context=".BrightSide">
-
+    tools:context=".Reflection">
 
     <TextView
-        android:id="@+id/brightSide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/brightside_text1"
+        android:id="@+id/thankYou"
+        android:layout_width="230dp"
+        android:layout_height="33dp"
+        android:text="@string/record_journal_text1"
         android:textColor="@color/whiteTextColor"
+        android:textSize="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.061" />
 
-    <TextView
-        android:id="@+id/brightSide01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/brightside_text2"
-        android:textColor="@color/whiteTextColor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.102" />
-
     <EditText
-        android:id="@+id/writeBS"
+        android:id="@+id/positives"
         android:layout_width="342dp"
         android:layout_height="546dp"
-        android:text="@string/tell_metxt"
+        android:hint="@string/txtfrag"
         android:textColor="@color/whiteTextColor"
+        android:textColorHint="@color/whiteTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.572" />
 
     <Button
-        android:id="@+id/fin"
+        android:id="@+id/done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/brightside_text3"
+        android:text="@string/record_journal_text2"
         android:textColor="@color/whiteTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
