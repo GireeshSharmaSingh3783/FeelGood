@@ -9,21 +9,21 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/confirmpassreg"
-        android:layout_width="378dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="88dp"
+        android:layout_width="385dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="104dp"
         android:ems="10"
         android:hint="@string/confirm_password"
         android:inputType="text"
         android:textSize="24sp"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.303"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailreg">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="389dp"
+            android:layout_height="52dp"
 
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -61,8 +61,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/age"
-        android:layout_width="382dp"
-        android:layout_height="46dp"
+        android:layout_width="377dp"
+        android:layout_height="54dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/age"
@@ -82,7 +82,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/gender"
         android:layout_width="378dp"
-        android:layout_height="47dp"
+        android:layout_height="58dp"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/gender"
@@ -103,8 +103,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailreg"
-        android:layout_width="380dp"
-        android:layout_height="44dp"
+        android:layout_width="392dp"
+        android:layout_height="52dp"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="@string/login_email_hint"
@@ -124,8 +124,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passreg"
-        android:layout_width="376dp"
-        android:layout_height="41dp"
+        android:layout_width="385dp"
+        android:layout_height="54dp"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="@string/password"
