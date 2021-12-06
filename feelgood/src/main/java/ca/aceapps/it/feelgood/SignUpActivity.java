@@ -70,11 +70,11 @@ public class SignUpActivity extends AppCompatActivity {
                 refDB = rootNode.getReference("users");
 
                 //Getting values from text fields
-                String name = editTextFullName.getEditText().getText().toString();
-                String age = editTextAge.getEditText().getText().toString();
-                String phoneNumber = editTextGender.getEditText().getText().toString();
-                String email = editTextEmail.getEditText().getText().toString();
-                String password = editTextPassword.getEditText().getText().toString();
+                String name = editTextFullName.getEditText().getText().toString().trim();
+                String age = editTextAge.getEditText().getText().toString().trim();
+                String phoneNumber = editTextGender.getEditText().getText().toString().trim();
+                String email = editTextEmail.getEditText().getText().toString().trim();
+                String password = editTextPassword.getEditText().getText().toString().trim();
 
 
                 if (name.isEmpty()) {
@@ -154,34 +154,4 @@ public class SignUpActivity extends AppCompatActivity {
 }
 
 
-//        progressBar.setVisibility(View.VISIBLE);
-//        mAuth.createUserWithEmailAndPassword(email,password)
-//                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                        if(task.isSuccessful()){
-//                            User user = new User(fullName, age, gender, email);
-//
-//                            FirebaseDatabase.getInstance().getReference("Users")
-//                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-//                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-//                                @Override
-//                                public void onComplete(@NonNull Task<Void> task) {
-//                                    if(task.isSuccessful()){
-//                                        Toast.makeText(SignUpActivity.this,"User has been registered Successfully",Toast.LENGTH_LONG).show();
-//                                        progressBar.setVisibility(View.GONE);
-//                                    }else{
-//                                        Toast.makeText(SignUpActivity.this,"Failed to register. Please try again",Toast.LENGTH_LONG).show();
-//                                        progressBar.setVisibility(View.GONE);
-//                                    }
-//                                }
-//                            });
-//                        }else{
-//                            Toast.makeText(SignUpActivity.this,"Failed to register. Please try again",Toast.LENGTH_LONG).show();
-//                            progressBar.setVisibility(View.GONE);
-//                        }
-//                    }
-//                });
-//
-//    }
 
