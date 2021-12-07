@@ -40,11 +40,6 @@ public class GalleryFragment extends Fragment {
     private FragmentGalleryBinding binding;
     private Button happy, sad;
     EditText say;
-//    String tell;
-//
-//    ArrayList<String> dayofweek;
-//    ArrayAdapter<String> dw;
-
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -62,18 +57,6 @@ public class GalleryFragment extends Fragment {
         sad=root.findViewById(R.id.sadButton);
 
         say=root.findViewById(R.id.editText);
-
-//        spinner=(Spinner) root.findViewById(R.id.spinner);
-//        dayofweek = new ArrayList<>();
-//        dayofweek.add("Monday");
-//        dayofweek.add("Tuesday");
-//        dayofweek.add("Wednesday");
-//        dayofweek.add("Thursday");
-//        dayofweek.add("Friday");
-//        dayofweek.add("Saturday");
-//        dayofweek.add("Sunday");
-//        dw = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_item, dayofweek);
-//        spinner.setAdapter(dw);
 
 
 
