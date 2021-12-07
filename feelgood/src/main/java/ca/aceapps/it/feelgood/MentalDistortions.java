@@ -12,10 +12,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Switch;
 
 public class MentalDistortions extends AppCompatActivity {
     Button nxtbt, learnMore;
-
+    CheckBox aOn, filter, label, disPo, ovrGen, caT, mindRe, forTel, bNw;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,5 +41,8 @@ public class MentalDistortions extends AppCompatActivity {
 
             }
         });
+
+
+
     }
 }
