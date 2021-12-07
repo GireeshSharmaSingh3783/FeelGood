@@ -50,8 +50,6 @@ public class SignUpActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-      //banner = (TextView) findViewById(R.id.Banner);
-      //banner.setOnClickListener(this);
 
 
         editTextFullName = findViewById(R.id.fullName);
@@ -142,7 +140,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 }else{
                             Toast.makeText(SignUpActivity.this,"Failed to register. Please try again",Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
-                                   // refDB.child(phoneNumber).setValue("users");
+
                                 }
                             }
                         });
