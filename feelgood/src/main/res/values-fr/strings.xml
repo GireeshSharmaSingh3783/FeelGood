@@ -77,4 +77,9 @@ Mot de passe oublié?</string>
     <string name="rate_btn_pos">Rate Now</string>
     <string name="rate_btn_neg">Remind me later</string>
     <string name="rate_btn_nut">No, Thanks</string>
+    <string name="rateapp">Rate App!</string>
+    <string name="commentsrev">Comments</string>
+    <string name="phonerev">Phone Number</string>
+    <string name="emailrev">Email</string>
+    <string name="comentsrev">Tell us how we did!</string>
 </resources>

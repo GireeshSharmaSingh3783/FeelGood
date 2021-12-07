@@ -12,7 +12,7 @@
         android:layout_width="175dp"
         android:layout_height="61dp"
         android:layout_marginTop="44dp"
-        android:text="Rate App!"
+        android:text="@string/rateapp"
         android:textColor="@color/colorPrimary"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -27,7 +27,7 @@
         android:layout_height="44dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="456dp"
-        android:text="Comments"
+        android:text="@string/commentsrev"
         android:textColor="#171616"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -42,7 +42,7 @@
         android:layout_marginBottom="504dp"
         android:ems="10"
         android:inputType="phone"
-        android:text="Phone Number"
+        android:text="@string/phonerev"
         android:textColor="#0C0C0C"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,7 +56,7 @@
         android:layout_marginBottom="420dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="Email"
+        android:text="@string/emailrev"
         android:textColor="#050505"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -76,7 +76,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:text="Tell us how we did!" />
+        tools:text="@string/comentsrev" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
