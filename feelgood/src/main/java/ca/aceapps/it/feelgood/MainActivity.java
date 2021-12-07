@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void review(View view) {
-        Intent intent = new Intent(MainActivity.this, Review.class);
+        Intent intent = new Intent(MainActivity.this, Review_screen.class);
         startActivity(intent);
     }
 }

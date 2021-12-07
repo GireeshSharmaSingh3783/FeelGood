@@ -25,7 +25,8 @@ public class MentalDistortions extends AppCompatActivity {
         nxtbt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent (getApplicationContext(), Reflection.class));
+                Intent intent = new Intent(MentalDistortions.this, BrightSide.class);
+                startActivity(intent);
             }
         });
 
