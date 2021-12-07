@@ -31,9 +31,5 @@
 
 
 
-    <fragment
-        android:id="@+id/nav_customer"
-        android:name="ca.aceapps.it.feelgood.ui.Review"
-        android:label="@string/customer_revi"
-        tools:layout="@layout/activity_review_screen" />
+
 </navigation>

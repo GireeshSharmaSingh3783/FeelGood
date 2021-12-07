@@ -30,7 +30,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import ca.aceapps.it.feelgood.databinding.ActivityMainBinding;
-import ca.aceapps.it.feelgood.Review;
 
 import static ca.aceapps.it.feelgood.ui.draw.PaintView.colorList;
 import static ca.aceapps.it.feelgood.ui.draw.PaintView.current_brush;
@@ -67,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery,R.id.nav_slideshow,R.id.nav_customer)
+                R.id.nav_home, R.id.nav_gallery,R.id.nav_slideshow)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
