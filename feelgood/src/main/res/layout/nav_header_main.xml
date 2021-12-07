@@ -49,7 +49,7 @@
         android:layout_height="31dp"
         android:layout_marginStart="284dp"
         android:layout_marginBottom="56dp"
-        android:text="Review"
+        android:text="@string/rev"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
