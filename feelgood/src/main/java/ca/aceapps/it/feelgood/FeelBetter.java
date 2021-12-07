@@ -1,22 +1,20 @@
 package ca.aceapps.it.feelgood;
-//Gireesh
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 
-public class Reflection extends AppCompatActivity {
+public class FeelBetter extends AppCompatActivity {
 
     Button fini;
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bright_side);
+        setContentView(R.layout.activity_feel_better);
 
         fini = findViewById(R.id.done);
         fini.setOnClickListener(new View.OnClickListener() {

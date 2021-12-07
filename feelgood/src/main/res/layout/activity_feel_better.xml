@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1C1A1A"
-    tools:context=".Reflection">
+    tools:context=".FeelBetter">
 
     <TextView
         android:id="@+id/thankYou"
-        android:layout_width="230dp"
-        android:layout_height="33dp"
-        android:text="@string/record_journal_text1"
+        android:layout_width="295dp"
+        android:layout_height="60dp"
+        android:text="@string/are_there_any_positives_to_your_situation"
         android:textColor="@color/whiteTextColor"
         android:textSize="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,7 +38,7 @@
         android:id="@+id/done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to home page"
+        android:text="@string/go_to_home_page"
         android:textColor="@color/whiteTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
