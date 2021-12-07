@@ -38,7 +38,7 @@
         android:id="@+id/done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/record_journal_text2"
+        android:text="Go to home page"
         android:textColor="@color/whiteTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

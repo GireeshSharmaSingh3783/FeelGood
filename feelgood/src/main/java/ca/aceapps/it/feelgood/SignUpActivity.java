@@ -113,11 +113,14 @@ public class SignUpActivity extends AppCompatActivity {
                     return;
                 }
 
-                if (password.length() < 6) {
-                    editTextPassword.setError("Password should be at least 6 characters long");
+                if (password.length() < 8) {
+                    editTextPassword.setError("Password should be at least 8 characters long");
                     editTextPassword.requestFocus();
                     return;
                 }
+
+               //if (isValidPass(password)){
+
 
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -151,6 +154,16 @@ public class SignUpActivity extends AppCompatActivity {
 
 
     }
+
+//    public Boolean isValidpass(String password){
+//        if (password.length() < 8) {
+//            editTextPassword.setError("Password should be at least 8 characters long");
+//            editTextPassword.requestFocus();
+//            return false;
+//        } else {
+//
+//
+//    }
 }
 
 
