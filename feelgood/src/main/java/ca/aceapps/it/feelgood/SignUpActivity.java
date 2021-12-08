@@ -117,8 +117,11 @@ public class SignUpActivity extends AppCompatActivity {
                     return;
                 }
 
-               //if (isValidPass(password)){
-
+//               if (isValidPass(password) == false) {
+//                   editTextPassword.setError("please fix password");
+//                   editTextPassword.requestFocus();
+//                   return;
+//               }
 
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -153,16 +156,42 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-//    public Boolean isValidpass(String password){
+//    public Boolean isValidPass(String password) {
+//        char[] uglySymbol = new char[3];
+//        uglySymbol[0] = '+';
+//        uglySymbol[1] = '~';
+//        uglySymbol[2] = '`';
+//
 //        if (password.length() < 8) {
 //            editTextPassword.setError("Password should be at least 8 characters long");
 //            editTextPassword.requestFocus();
 //            return false;
 //        } else {
+//            char c;
+//            int count = 1;
+//            for(int  i = 0; i < password.length() -1; i++){
+//                c = password.charAt(i);
+//                if (!Character.isLetterOrDigit(c)) {
+//                    return false;
+//                } else if (!Character.isUpperCase(c)){
+//                    editTextPassword.setError("need upperCase letter");
+//                    editTextPassword.requestFocus();
+//                    return false;
+//                }else if (c == uglySymbol[0] || c == uglySymbol[1] || c == uglySymbol[2] ){
+//                    editTextPassword.setError("invalid characters + , ~, ` ");
+//                    editTextPassword.requestFocus();
+//
+//                    return false;
+//
+//                }
+//            }
 //
 //
+//        }
+//        return true;
 //    }
-}
-
+//}
+//
+        }
 
 
