@@ -62,7 +62,7 @@ Mot de passe oublié?</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="customer_menu">Review</string>
     <string name="draw">Draw</string>
-    <string name="tell_metxt">Tell me how your day was...</string>
+    <string name="tell_metxt" tools:ignore="TypographyEllipsis">Tell me how your day was...</string>
     <string name="b1hom">create</string>
     <string name="b2hom">paint</string>
     <string name="b3hom">diary</string>
