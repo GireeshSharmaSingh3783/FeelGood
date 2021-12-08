@@ -37,7 +37,7 @@
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 
 
-    <string name="brightside_text1">What happend today?</string>
+    <string name="brightside_text1">What happened today?</string>
     <string name="brightside_text2">Can you write the positives of your situation?</string>
     <string name="brightside_text3">Finish</string>
     <string name="mental_text1">All or Nothing</string>
@@ -46,7 +46,7 @@
     <string name="mental_text4">Cognitive Distortions</string>
     <string name="mental_text5">TextView</string>
     <string name="mental_text6">Next</string>
-    <string name="record_journal_text1">What happend today?</string>
+    <string name="record_journal_text1">What happened today?</string>
     <string name="record_journal_text2">Next</string>
     <string name="home_text1">Button</string>
     <string name="slideshow_text1">Button</string>
@@ -66,7 +66,7 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="customer_menu">Review</string>
     <string name="draw">Draw</string>
-    <string name="tell_metxt">Tell me how your day was...</string>
+    <string name="tell_metxt" tools:ignore="TypographyEllipsis">Tell me how your day was...</string>
     <string name="b1hom">create</string>
     <string name="b2hom">paint</string>
     <string name="b3hom">diary</string>
