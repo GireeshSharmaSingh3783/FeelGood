@@ -21,4 +21,7 @@
     <color name="whiteTextColor">#fff</color>
     <color name="primaryTextColor">#11CFC5</color>
     <color name="yellow">#FFF24F</color>
+    <color name="draw_background">#000000</color>
+    <color name="draw_background2">#033301</color>
+
 </resources>

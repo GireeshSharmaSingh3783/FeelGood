@@ -1,14 +1,14 @@
 //Gireesh Sharma-Singh N01193783
 //Zhiyuan Hua N01406966
-// Brett Kean N01158642
 //Eghe Iyobosa N01107171
 //Supriya N01394695
 ////////////////////////////////////////
 package ca.aceapps.it.feelgood;
 
-import android.Manifest;
 import android.content.DialogInterface;
-import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
 import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.View;
@@ -22,8 +22,6 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -33,10 +31,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import ca.aceapps.it.feelgood.databinding.ActivityMainBinding;
 
+import static ca.aceapps.it.feelgood.ui.draw.PaintView.colorList;
+import static ca.aceapps.it.feelgood.ui.draw.PaintView.current_brush;
+import static ca.aceapps.it.feelgood.ui.draw.PaintView.pathList;
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+
+    public static Path path = new Path();
+    public static Paint paint_brush = new Paint();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home, R.id.nav_gallery,R.id.nav_slideshow)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -111,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
+
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
@@ -146,5 +152,56 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void currentColor(int c){
+        current_brush = c;
+        path = new Path();
+    }
+    public void pencil(View view){
+        paint_brush.setColor(Color.LTGRAY);
+        currentColor(paint_brush.getColor());
+    }
+    public void eraser(View view){
+        pathList.clear();
+        colorList.clear();
+        path.reset();
+    }
+    public void red(View view){
+        paint_brush.setColor(Color.RED);
+        currentColor(paint_brush.getColor());
+    }
+    public void yellow(View view){
+        paint_brush.setColor(Color.YELLOW);
+        currentColor(paint_brush.getColor());
+    }
+    public void green(View view){
+        paint_brush.setColor(Color.GREEN);
+        currentColor(paint_brush.getColor());
+    }
+    public void blue(View view){
+        paint_brush.setColor(Color.BLUE);
+        currentColor(paint_brush.getColor());
+    }
 
+
+    public void create(View view) {
+        Intent intent = new Intent(MainActivity.this, JournalRecord.class);
+        startActivity(intent);
+    }
+
+    public void paint(View view) {
+        Intent intent;
+        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.cnbc.com/2020/03/31/mental-vacations-and-travel-photos-relieve-stress.html"));
+        startActivity(intent);
+    }
+
+    public void diary(View view) {
+        Intent intent;
+        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://owlcation.com/humanities/Why-is-it-important-to-keep-a-journal"));
+        startActivity(intent);
+    }
+
+    public void review(View view) {
+        Intent intent = new Intent(MainActivity.this, Review_screen.class);
+        startActivity(intent);
+    }
 }

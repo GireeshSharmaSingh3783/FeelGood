@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1C1A1A"
-    tools:context=".RecordJournal">
+    tools:context=".FeelBetter">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/record_journal_text1"
+        android:id="@+id/thankYou"
+        android:layout_width="295dp"
+        android:layout_height="60dp"
+        android:text="@string/are_there_any_positives_to_your_situation"
         android:textColor="@color/whiteTextColor"
+        android:textSize="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,23 +21,24 @@
         app:layout_constraintVertical_bias="0.061" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/positives"
         android:layout_width="342dp"
         android:layout_height="546dp"
-        android:text="@string/hello_blank_fragment"
+        android:hint="@string/txtfrag"
         android:textColor="@color/whiteTextColor"
+        android:textColorHint="@color/whiteTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
+        app:layout_constraintVertical_bias="0.572" />
 
     <Button
-        android:id="@+id/nxtBtn"
+        android:id="@+id/done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/record_journal_text2"
+        android:text="@string/go_to_home_page"
         android:textColor="@color/whiteTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,6 +46,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.954" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

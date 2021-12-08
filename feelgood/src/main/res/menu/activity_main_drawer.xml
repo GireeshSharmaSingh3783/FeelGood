@@ -13,14 +13,14 @@
             android:icon="@drawable/create_journal"
             android:title="@string/menu_gallery" />
         <item
+            android:id="@+id/nav_draw"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="@string/draw" />
+        <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/library"
             android:title="@string/menu_slideshow" />
 
-        <item
-            android:id="@+id/nav_Customer"
-            android:icon="@drawable/customer_rev"
-            android:title="@string/customer" />
 
     </group>
 </menu>

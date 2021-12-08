@@ -1,6 +1,5 @@
 //Gireesh Sharma-Singh N01193783
 //Zhiyuan Hua N01406966
-// Brett Kean N01158642
 //Eghe Iyobosa N01107171
 //Supriya N01394695
 //////////////////////////////////
@@ -28,8 +27,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class SignUpActivity extends AppCompatActivity{
-
+public class SignUpActivity extends AppCompatActivity {
 
 
     private FirebaseAuth mAuth;
@@ -50,17 +48,15 @@ public class SignUpActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        //mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
-//        banner = (TextView) findViewById(R.id.Banner);
-//        banner.setOnClickListener(this);
 
 
         editTextFullName = findViewById(R.id.fullName);
-        editTextAge =  findViewById(R.id.age);
-        editTextGender =  findViewById(R.id.gender);
-        editTextEmail  = findViewById(R.id.emailreg);
-        editTextPassword =  findViewById(R.id.passreg);
+        editTextAge = findViewById(R.id.age);
+        editTextGender = findViewById(R.id.gender);
+        editTextEmail = findViewById(R.id.emailreg);
+        editTextPassword = findViewById(R.id.passreg);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         registerUser = (Button) findViewById(R.id.reguser);
@@ -72,114 +68,130 @@ public class SignUpActivity extends AppCompatActivity{
                 refDB = rootNode.getReference("users");
 
                 //Getting values from text fields
-                String name = editTextFullName.getEditText().getText().toString();
-                String age =editTextAge.getEditText().getText().toString();
-                String phoneNumber= editTextGender.getEditText().getText().toString();
-                String email= editTextEmail.getEditText().getText().toString();
-                String password=editTextPassword.getEditText().getText().toString();
+                String name = editTextFullName.getEditText().getText().toString().trim();
+                String age = editTextAge.getEditText().getText().toString().trim();
+                String phoneNumber = editTextGender.getEditText().getText().toString().trim();
+                String email = editTextEmail.getEditText().getText().toString().trim();
+                String password = editTextPassword.getEditText().getText().toString().trim();
 
-                User users = new User(name, age, phoneNumber, email, password);
-                // please change gender to phone number
-                refDB.child(phoneNumber).setValue(users);
+
+                if (name.isEmpty()) {
+                    editTextFullName.setError("Full name is required");
+                    editTextFullName.requestFocus();
+                    return;
+                }
+
+                if (age.isEmpty()) {
+                    editTextAge.setError("Age is required");
+                    editTextAge.requestFocus();
+                    return;
+                }
+
+                if (phoneNumber.isEmpty()) {
+                    editTextGender.setError("Please provide your gender");
+                    editTextGender.requestFocus();
+                    return;
+                }
+
+                if (email.isEmpty()) {
+                    editTextEmail.setError("Email is required");
+                    editTextEmail.requestFocus();
+                    return;
+                }
+
+                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    editTextEmail.setError("Please provide a valid email address");
+                    editTextEmail.requestFocus();
+                    return;
+                }
+
+                if (password.isEmpty()) {
+                    editTextPassword.setError("Password is required");
+                    editTextPassword.requestFocus();
+                    return;
+                }
+
+                if (password.length() < 8) {
+                    editTextPassword.setError("Password should be at least 8 characters long");
+                    editTextPassword.requestFocus();
+                    return;
+                }
+
+//               if (isValidPass(password) == false) {
+//                   editTextPassword.setError("please fix password");
+//                   editTextPassword.requestFocus();
+//                   return;
+//               }
+
+                mAuth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if(task.isSuccessful()){
+                                    User users = new User(name, age, phoneNumber, email, password);
+
+                                    FirebaseDatabase.getInstance().getReference("users")
+                                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                            .setValue(users).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if(task.isSuccessful()){
+                                                Toast.makeText(SignUpActivity.this, "User has been added", Toast.LENGTH_LONG).show();
+                                            }
+                                        }
+                                    });
+                                }else{
+                            Toast.makeText(SignUpActivity.this,"Failed to register. Please try again",Toast.LENGTH_LONG).show();
+                            progressBar.setVisibility(View.GONE);
+
+                                }
+                            }
+                        });
+
+
 
             }
         });
+
+
     }
 
-
+//    public Boolean isValidPass(String password) {
+//        char[] uglySymbol = new char[3];
+//        uglySymbol[0] = '+';
+//        uglySymbol[1] = '~';
+//        uglySymbol[2] = '`';
 //
-//    @Override
-//    public void onClick(View v) {
-//        switch (v.getId()){
-//            case R.id.Banner:
-//                startActivity(new Intent(this, LoginActivity.class));
-//                break;
-//
-//            case R.id.reguser:
-//                registerUser();
-//
-//        }
-//
-//    }
-//
-//    private void registerUser() {
-//        String email = editTextEmail.getText().toString().trim();
-//        String password = editTextPassword.getText().toString().trim();
-//        String fullName = editTextFullName.getText().toString().trim();
-//        String age = editTextAge.getText().toString().trim();
-//        String gender = editTextGender.getText().toString().trim();
-//
-//        if(fullName.isEmpty()){
-//            editTextFullName.setError("Full name is required");
-//            editTextFullName.requestFocus();
-//            return;
-//        }
-//
-//        if(age.isEmpty()){
-//            editTextAge.setError("Age is required");
-//            editTextAge.requestFocus();
-//            return;
-//        }
-//
-//        if(gender.isEmpty()){
-//            editTextGender.setError("Please provide your gender");
-//            editTextGender.requestFocus();
-//            return;
-//        }
-//
-//        if(email.isEmpty()){
-//            editTextEmail.setError("Email is required");
-//            editTextEmail.requestFocus();
-//            return;
-//        }
-//
-//        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-//            editTextEmail.setError("Please provide a valid email address");
-//            editTextEmail.requestFocus();
-//            return;
-//        }
-//
-//        if(password.isEmpty()){
-//            editTextPassword.setError("Password is required");
+//        if (password.length() < 8) {
+//            editTextPassword.setError("Password should be at least 8 characters long");
 //            editTextPassword.requestFocus();
-//            return;
+//            return false;
+//        } else {
+//            char c;
+//            int count = 1;
+//            for(int  i = 0; i < password.length() -1; i++){
+//                c = password.charAt(i);
+//                if (!Character.isLetterOrDigit(c)) {
+//                    return false;
+//                } else if (!Character.isUpperCase(c)){
+//                    editTextPassword.setError("need upperCase letter");
+//                    editTextPassword.requestFocus();
+//                    return false;
+//                }else if (c == uglySymbol[0] || c == uglySymbol[1] || c == uglySymbol[2] ){
+//                    editTextPassword.setError("invalid characters + , ~, ` ");
+//                    editTextPassword.requestFocus();
+//
+//                    return false;
+//
+//                }
+//            }
+//
+//
 //        }
-//
-//        if(password.length() < 6){
-//            editTextPassword.setError("Password should be at least 6 characters long");
-//            editTextPassword.requestFocus();
-//            return;
-//        }
-//
-//        progressBar.setVisibility(View.VISIBLE);
-//        mAuth.createUserWithEmailAndPassword(email,password)
-//                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                        if(task.isSuccessful()){
-//                            User user = new User(fullName, age, gender, email);
-//
-//                            FirebaseDatabase.getInstance().getReference("Users")
-//                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-//                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-//                                @Override
-//                                public void onComplete(@NonNull Task<Void> task) {
-//                                    if(task.isSuccessful()){
-//                                        Toast.makeText(SignUpActivity.this,"User has been registered Successfully",Toast.LENGTH_LONG).show();
-//                                        progressBar.setVisibility(View.GONE);
-//                                    }else{
-//                                        Toast.makeText(SignUpActivity.this,"Failed to register. Please try again",Toast.LENGTH_LONG).show();
-//                                        progressBar.setVisibility(View.GONE);
-//                                    }
-//                                }
-//                            });
-//                        }else{
-//                            Toast.makeText(SignUpActivity.this,"Failed to register. Please try again",Toast.LENGTH_LONG).show();
-//                            progressBar.setVisibility(View.GONE);
-//                        }
-//                    }
-//                });
-//
+//        return true;
 //    }
+//}
+//
+        }
 
-}
+

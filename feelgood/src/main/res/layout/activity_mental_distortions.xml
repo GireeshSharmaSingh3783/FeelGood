@@ -13,12 +13,55 @@
         android:layout_height="wrap_content"
         android:text="@string/mental_text1"
         android:textColor="@color/whiteTextColor"
+        android:buttonTint="@color/whiteTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.155" />
+        app:layout_constraintVertical_bias="0.142" />
+
+    <CheckBox
+        android:id="@+id/Filtering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filtering"
+        android:textColor="@color/whiteTextColor"
+        android:buttonTint="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.682"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <CheckBox
+        android:id="@+id/Labeling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label"
+        android:textColor="@color/whiteTextColor"
+        android:buttonTint="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.212" />
+
+    <CheckBox
+        android:id="@+id/discountingPositive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/discounting"
+        android:textColor="@color/whiteTextColor"
+        android:buttonTint="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.282" />
 
     <CheckBox
         android:id="@+id/Overgeneralization"
@@ -26,12 +69,13 @@
         android:layout_height="wrap_content"
         android:text="@string/mental_text2"
         android:textColor="@color/whiteTextColor"
+        android:buttonTint="@color/whiteTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.212" />
 
     <CheckBox
         android:id="@+id/Catastrophizing"
@@ -39,12 +83,55 @@
         android:layout_height="wrap_content"
         android:text="@string/mental_text3"
         android:textColor="@color/whiteTextColor"
+        android:buttonTint="@color/whiteTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintVertical_bias="0.282" />
+
+    <CheckBox
+        android:id="@+id/mindReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mireading"
+        android:textColor="@color/whiteTextColor"
+        android:buttonTint="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.352" />
+
+    <CheckBox
+        android:id="@+id/fortuneTelling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chkbox"
+        android:textColor="@color/whiteTextColor"
+        android:buttonTint="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421" />
+
+    <CheckBox
+        android:id="@+id/blackWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chkboxbwhite"
+        android:textColor="@color/whiteTextColor"
+        android:buttonTint="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.491" />
 
     <TextView
         android:id="@+id/mentalDis"
@@ -52,6 +139,7 @@
         android:layout_height="wrap_content"
         android:text="@string/mental_text4"
         android:textColor="@color/whiteTextColor"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -79,8 +167,21 @@
         android:textColor="@color/whiteTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
+        app:layout_constraintVertical_bias="0.947" />
+
+    <Button
+        android:id="@+id/learnmore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/learn"
+        android:textColor="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.753"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.947" />
 </androidx.constraintlayout.widget.ConstraintLayout>

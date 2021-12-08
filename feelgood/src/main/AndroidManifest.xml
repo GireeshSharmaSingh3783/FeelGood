@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FeelGood">
         <activity
+            android:name=".FeelBetter"
+            android:exported="false" />
+        <activity
+            android:name=".Review_screen"
+            android:exported="true" />
+        <activity
+            android:name=".JournalRecord"
+            android:exported="false" />
+        <activity
             android:name=".MentalDistortions"
             android:exported="false" />
         <activity

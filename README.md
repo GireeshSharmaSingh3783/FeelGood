@@ -12,3 +12,8 @@
 # Project milestone. 
 ###### App is currently running smooth with a few warnings.
 ###### Proceeding with deliverable 3.
+###### Final deliverable
+# Bill of Materials
+###### $25 usd one time payment for App Publishing.
+# In-App
+###### ![img_2.png](img_2.png) ![img_1.png](img_1.png)  ![img.png](img.png) 

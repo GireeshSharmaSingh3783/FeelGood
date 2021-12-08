@@ -1,6 +1,5 @@
 //Gireesh Sharma-Singh N01193783
 //Zhiyuan Hua N01406966
-// Brett Kean N01158642
 //Eghe Iyobosa N01107171
 //Supriya N01394695
 package ca.aceapps.it.feelgood.ui.home;
@@ -35,7 +34,7 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
-    private ImageButton button1;
+
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -54,31 +53,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
-
-        button1 = root.findViewById(R.id.goolebutton);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar snackbar = Snackbar.make(v,"Do you want go to Google ?",Snackbar.LENGTH_LONG).setAction("Yes",new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        openWeb("https://google.ca");
-
-                    }
-
-                    public void openWeb(String url) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse(url));
-                        startActivity(intent);
-                    }
-                });
-                snackbar.setActionTextColor(Color.GREEN);
-                snackbar.setTextColor(Color.YELLOW);
-                snackbar.show();
-
-            }
-        });
 
 
 

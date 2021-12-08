@@ -1,6 +1,5 @@
 <!--Gireesh Sharma-Singh N01193783 -->
 <!--Zhiyuan Hua N01406966-->
-<!--Brett Kean N01158642-->
 <!--Eghe Iyobosa N01107171-->
 <!--Supriya N01394695-->
 
@@ -19,6 +18,7 @@
     <string name="menu_home">Home page</string>
     <string name="menu_gallery">Create a Journal</string>
     <string name="menu_slideshow">Read Past Journals</string>
+    <string name="menu_draw">Draw</string>
     <string name="welcome">WELCOME TO FEEL GOOD</string>
     <string name="youtube">youtube</string>
 
@@ -51,7 +51,7 @@
     <string name="home_text1">Button</string>
     <string name="slideshow_text1">Button</string>
     <string name="customer_revi">custome_rev</string>
-    <string name="customer">customer_re</string>
+
     <string name="user_rating">User Rating</string>
     <string name="submit">Submit</string>
     <string name="happybutton">happyButton</string>
@@ -63,6 +63,46 @@
     <string name="comments">Comments</string>
     <string name="phone_number">Phone Number</string>
     <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="customer_menu">Review</string>
+    <string name="draw">Draw</string>
+    <string name="tell_metxt">Tell me how your day was...</string>
+    <string name="b1hom">create</string>
+    <string name="b2hom">paint</string>
+    <string name="b3hom">diary</string>
+    <string name="b4hom">review</string>
+    <string name="txthom">For additional resources navigate to the top menu bar to your right.</string>
+    <string name="txtfrag">Feel feel to share</string>
 
 
+    <string name="rate_app_title">Rate App</string>
+    <string name="rate_app_message">If you are enjoying our app, please take a moment to rate it on PlayStore. Thanks for your support!</string>
+    <string name="rate_btn_pos">Rate Now</string>
+    <string name="rate_btn_neg">Remind me later</string>
+    <string name="rate_btn_nut">No, Thanks</string>
+    <string name="rateapp">Rate App!</string>
+    <string name="commentsrev">Comments</string>
+    <string name="phonerev">Phone Number</string>
+    <string name="emailrev">Email</string>
+    <string name="comentsrev">Tell us how we did!</string>
+    <string name="txt_acoount">Don\'t have an account?</string>
+    <string name="filtering">Filtering</string>
+    <string name="label">Labeling</string>
+    <string name="discounting">Discounting Positive</string>
+    <string name="mireading">Mind Reading</string>
+    <string name="chkbox">Fortune Telling</string>
+    <string name="chkboxbwhite">Black and White Thinking</string>
+    <string name="learn">Learn More</string>
+    <string name="textgal">How are you feeling today?</string>
+    <string name="txt1slide">I thought i had it under control. I regret not acting sooner. Now it is all lost.</string>
+    <string name="txt2slide">I feel sick. It is non ending. How do i find myself.</string>
+    <string name="txt3slide">This process is taking too long. I am feeling very vulnerable. I need help.</string>
+    <string name="txt4slide">Day 4 on this process. Writring down what i feel everyday as helped me deal with various emotions recently. I think i am being pulled back from the edge.</string>
+    <string name="txt5slide">I am getting used to this. Today was a good day. I am happy because i found some closure.</string>
+    <string name="txt6slide">I am at day 6 of this week. Looking back to when i started keeping track of the days emotions. I see what am doing wrong.</string>
+    <string name="txt7slide">I figured out a way to help myself heal. From now on instaed of meditating on the problem I will actually deal with the problem</string>
+    <string name="txt8slide">Was recording your emotions helpful.</string>
+    <string name="rev">Review</string>
+    <string name="are_there_any_positives_to_your_situation" translatable="false">Are there any positives to your situation?</string>
+    <string name="go_to_home_page" translatable="false">Go to home page</string>
 </resources>

@@ -10,17 +10,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="290dp"
-        android:layout_height="266dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="72dp"
+        android:layout_width="318dp"
+        android:layout_height="216dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/feelgood" />
-
-
 
     <TextView
         android:id="@+id/text_Home"
@@ -37,21 +35,73 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.389" />
+        app:layout_constraintVertical_bias="0.117" />
 
-    <ImageButton
-        android:id="@+id/goolebutton"
-        android:layout_width="58dp"
-        android:layout_height="56dp"
-        android:background="@drawable/googlelogo"
-        android:text="@string/home_text1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="216dp"
+        android:onClick="create"
+        android:text="@string/b1hom"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="92dp"
+        android:onClick="paint"
+        android:text="@string/b2hom"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="87dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="276dp"
+        android:onClick="diary"
+        android:text="@string/b3hom"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="99dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="80dp"
+        android:onClick="review"
+        android:text="@string/b4hom"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="258dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="420dp"
+        android:text="@string/txthom"
+        android:textColor="#C8953A"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

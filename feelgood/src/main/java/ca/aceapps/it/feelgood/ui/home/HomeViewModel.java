@@ -1,6 +1,5 @@
 //Gireesh Sharma-Singh N01193783
 //Zhiyuan Hua N01406966
-// Brett Kean N01158642
 //Eghe Iyobosa N01107171
 //Supriya N01394695
 package ca.aceapps.it.feelgood.ui.home;
@@ -15,8 +14,7 @@ public class HomeViewModel extends ViewModel {
 
     public HomeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("   WELCOME TO FEEL GOOD "  +
-                " \nHOW CAN I HELP...?");
+        mText.setValue("   GETTING STARTED ");
     }
 
     public LiveData<String> getText() {

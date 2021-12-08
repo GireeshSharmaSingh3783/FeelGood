@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="450dp"
-        android:text="@string/phone_number"
+        android:text="Phone Number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="450dp"
-        android:text="@string/email"
+        android:text="Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -93,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
         android:layout_marginEnd="450dp"
-        android:text="@string/comments"
+        android:text="Comments"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
